@@ -111,8 +111,13 @@ function bump(scope) {
 /* ---------- Dice ---------- */
 // Rotation that brings each face (same order as DICE_FACES) to the front.
 const FACE_ROT = [[0, 0], [0, -90], [-90, 0], [0, 180], [0, 90], [90, 0]];
-let cubeRot = { x: -20, y: 30 };
+// Constant viewing tilt so three faces stay visible, before and after a roll.
+const TILT = 'rotateX(-20deg) rotateY(28deg)';
+const ROLL_MS = 1000;
+let cubeRot = { x: 0, y: 0 };
 let rolling = false;
+
+const restart = (el, cls) => { if (!el) return; el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); };
 
 function rollDice(btn) {
   if (rolling) return;
@@ -124,15 +129,20 @@ function rollDice(btn) {
   const pitch = app.querySelector('[data-dice-pitch]');
   const idx = Math.floor(Math.random() * 6);
   const [fx, fy] = FACE_ROT[idx];
-  const spinsX = reduceMotion.matches ? 0 : 2 + Math.floor(Math.random() * 2);
-  const spinsY = reduceMotion.matches ? 0 : 2 + Math.floor(Math.random() * 2);
+  const still = reduceMotion.matches;
+  const spinsX = still ? 0 : 2 + Math.floor(Math.random() * 2);
+  const spinsY = still ? 0 : 2 + Math.floor(Math.random() * 2);
   const nx = Math.ceil(cubeRot.x / 360) * 360 + spinsX * 360 + fx;
   const ny = Math.ceil(cubeRot.y / 360) * 360 + spinsY * 360 + fy;
   cubeRot = { x: nx, y: ny };
   btn.disabled = true;
   btn.textContent = s.rolling;
   bugBox.querySelector('[data-bump]').textContent = '…';
-  cube.style.transform = `rotateX(${nx}deg) rotateY(${ny}deg)`;
+  if (!still) {
+    restart(app.querySelector('[data-dice-lift]'), 'is-rolling');
+    restart(app.querySelector('[data-dice-shadow]'), 'is-rolling');
+  }
+  cube.style.transform = `${TILT} rotateX(${nx}deg) rotateY(${ny}deg)`;
   const done = () => {
     const face = DICE_FACES[idx];
     const f = s.faces[face];
@@ -140,12 +150,12 @@ function rollDice(btn) {
     bugBox.innerHTML = scoreBug({ home: content.ui.home, away: content.ui.away, mid: f.label, min: '20:00', label: `${s.resultLabel}: ${f.label}` });
     bump(bugBox);
     text.textContent = f.text;
-    pitch.innerHTML = dicePitch(n, s.pitchAlt);
+    pitch.innerHTML = dicePitch(n, s.pitchAlt, f.label);
     btn.disabled = false;
     btn.textContent = s.again;
     rolling = false;
   };
-  setTimeout(done, reduceMotion.matches ? 50 : 850);
+  setTimeout(done, still ? 50 : ROLL_MS);
 }
 
 /* ---------- Quiz ---------- */

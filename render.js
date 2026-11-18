@@ -2,6 +2,8 @@
 // Used in the browser (language switch) and by tools/prerender.mjs (no-JS fallback).
 // Visual language: Kings League Explainer DS (design/tokens.css + design/components.css, prefix kx-).
 
+import { cardArt } from './illustrations.js';
+
 export const LANGS = ['en', 'it', 'es'];
 
 export const esc = (s) =>
@@ -32,48 +34,54 @@ const sectionHead = (s, id) => `
 /* ---------- Generic badge for the dice "logo" face (own design, not the league's) ---------- */
 export const BADGE = `<svg class="badge" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/><text x="24" y="31" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" fill="currentColor">7</text></svg>`;
 
-/* ---------- Card icons (own strokes, 64-unit grid, drawn at 34px) ---------- */
-const T = 'font-family="Archivo, Arial Black, sans-serif" font-weight="900"';
-const ICONS = {
-  x2: `<text x="32" y="43" text-anchor="middle" ${T} font-size="28" fill="currentColor">x2</text>`,
-  suspension: `<circle cx="32" cy="35" r="19" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 23v12l8 5M25 9h14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>`,
-  star: `<path d="m32 7 7.5 15.5 17 2.3-12.4 11.9 3 16.8L32 45.3l-15.1 8.2 3-16.8L7.5 24.8l17-2.3Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>`,
-  shootout: `<circle cx="16" cy="40" r="9" fill="none" stroke="currentColor" stroke-width="4"/><path d="M30 40h24m-8-8 8 8-8 8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="42" y="22" text-anchor="middle" ${T} font-size="14" fill="currentColor">5s</text>`,
-  joker: `<rect x="12" y="8" width="26" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="4"/><rect x="26" y="20" width="26" height="36" rx="4" fill="#1C1C1C" stroke="currentColor" stroke-width="4"/><text x="39" y="45" text-anchor="middle" ${T} font-size="18" fill="currentColor">?</text>`,
-  reverse: `<path d="M50 27a19 19 0 0 0-33-9M14 37a19 19 0 0 0 33 9" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="m15 9 1 9 9-1M49 55l-1-9-9 1" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`,
-  penalty: `<path d="M6 44V14h52v30" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M6 24h52M6 34h52M19 14v30M32 14v30M45 14v30" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><circle cx="32" cy="55" r="5" fill="currentColor"/>`
-};
+/* ---------- Stadium (CSS 3D). One component for every pitch on the page. ----------
+   Players live inside the grass plane, so they follow the perspective automatically.
+   Coordinates are percentages of the pitch: x from the left goal line, y from the far touchline. */
+const LINES = `<svg class="st-lines" viewBox="0 0 189.2 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="#fff" stroke-width=".75" stroke-opacity=".92">
+    <rect x="1.6" y="1.6" width="186" height="96.8"/>
+    <line x1="94.6" y1="1.6" x2="94.6" y2="98.4"/>
+    <circle cx="94.6" cy="50" r="13.5"/>
+    <path d="M1.6 25H12A25 25 0 0 1 12 75H1.6"/>
+    <path d="M187.6 25H177.2A25 25 0 0 0 177.2 75H187.6"/>
+    <path d="M1.6 5.6A4 4 0 0 0 5.6 1.6M183.6 1.6A4 4 0 0 0 187.6 5.6M1.6 94.4A4 4 0 0 1 5.6 98.4M183.6 98.4A4 4 0 0 1 187.6 94.4"/>
+  </g>
+  <g fill="#fff" fill-opacity=".92"><circle cx="94.6" cy="50" r=".9"/><circle cx="30" cy="50" r=".8"/><circle cx="159.2" cy="50" r=".8"/></g>
+</svg>`;
 
-/* ---------- Arena pitch (SVG; colours come from CSS classes in styles.css) ---------- */
-let uid = 0;
-function arena(w, h, spots, alt, cls) {
-  const id = `ar${++uid}`;
-  const boxW = w * 0.12, boxH = h * 0.44;
-  return `<svg class="arena ${cls}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(alt)}">
-    <defs><radialGradient id="${id}" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#1A1550"/><stop offset="1" stop-color="#000"/></radialGradient></defs>
-    <rect width="${w}" height="${h}" rx="14" fill="url(#${id})"/>
-    <g class="arena-lines">
-      <rect x="6" y="6" width="${w - 12}" height="${h - 12}" rx="8"/>
-      <line x1="${w / 2}" y1="6" x2="${w / 2}" y2="${h - 6}"/>
-      <circle cx="${w / 2}" cy="${h / 2}" r="${h * 0.15}"/>
-    </g>
-    <g class="arena-box">
-      <rect x="6" y="${(h - boxH) / 2}" width="${boxW}" height="${boxH}"/>
-      <rect x="${w - 6 - boxW}" y="${(h - boxH) / 2}" width="${boxW}" height="${boxH}"/>
-    </g>
-    <circle class="arena-spot" cx="${w / 2}" cy="${h / 2}" r="3"/>
-    <rect class="gk gk-a" x="${14}" y="${h / 2 - 7}" width="14" height="14" rx="3"/>
-    <rect class="gk gk-b" x="${w - 28}" y="${h / 2 - 7}" width="14" height="14" rx="3"/>
-    ${spots.map(([x, y], i) => `<circle class="pl pl-a" style="--i:${i}" cx="${x}" cy="${y}" r="7.5"/>`).join('')}
-    ${spots.map(([x, y], i) => `<circle class="pl pl-b" style="--i:${i}" cx="${w - x}" cy="${y}" r="6.5"/>`).join('')}
-  </svg>`;
+const chip = (team, x, y, i, gk = false) =>
+  `<span class="st-pl st-pl--${team}${gk ? ' st-pl--gk' : ''}" style="left:${x}%;top:${y}%;--i:${i}"><i class="pl-sh"></i><i class="pl-l1"></i><i class="pl-l2"></i><i class="pl-l3"></i><i class="pl-top"></i></span>`;
+
+const goal3d = (side) => `<span class="st-goal st-goal--${side}"><i class="g-back"></i><i class="g-top"></i><i class="g-side g-side--a"></i><i class="g-side g-side--b"></i><i class="g-frame"></i></span>`;
+
+const panel = (n) => Array.from({ length: n }, (_, i) => `<i class="ad${i % 3 === 1 ? ' ad--stripe' : ''}"></i>`).join('');
+
+export function stadium(spots, alt, cls = '', screen = '7v7') {
+  const home = spots.map(([x, y], i) => chip('a', x, y, i)).join('');
+  const away = spots.map(([x, y], i) => chip('b', 100 - x, y, i)).join('');
+  return `<div class="stadium ${cls}" role="img" aria-label="${esc(alt)}">
+    <div class="st-scene" aria-hidden="true">
+      <div class="st-floor">
+        <i class="st-stands"></i>
+        <span class="st-light st-light--l"><i class="st-pole"></i><i class="st-head"></i></span>
+        <span class="st-light st-light--r"><i class="st-pole"></i><i class="st-head"></i></span>
+        <span class="st-wall st-wall--far">${panel(8)}</span>
+        <span class="st-screen"><b data-screen>${esc(screen)}</b></span>
+        <span class="st-wall st-wall--left">${panel(4)}</span>
+        <span class="st-wall st-wall--right">${panel(4)}</span>
+        <span class="st-pitch">${LINES}${chip('a', 3.4, 50, 0, true)}${chip('b', 96.6, 50, 0, true)}${home}${away}</span>
+        ${goal3d('l')}${goal3d('r')}
+        <span class="st-wall st-wall--near">${panel(8)}</span>
+      </div>
+    </div>
+  </div>`;
 }
 
-export const heroPitch = (alt) =>
-  arena(320, 200, [[62, 46], [62, 100], [62, 154], [110, 72], [110, 128], [142, 100]], alt, 'arena-hero');
+const HERO_SPOTS = [[13, 20], [13, 50], [13, 80], [27, 33], [27, 67], [40, 50]];
+export const heroPitch = (alt) => stadium(HERO_SPOTS, alt, 'stadium--hero', '7v7');
 
-const DICE_LAYOUT = { 0: [], 1: [[112, 90]], 2: [[96, 58], [116, 122]], 3: [[82, 90], [116, 48], [116, 132]] };
-export const dicePitch = (n, alt) => arena(300, 180, DICE_LAYOUT[n] || [], fill(alt, { n }), 'arena-dice');
+const DICE_LAYOUT = { 0: [], 1: [[34, 50]], 2: [[27, 30], [36, 70]], 3: [[23, 50], [35, 24], [35, 76]] };
+export const dicePitch = (n, alt, screen = '?') => stadium(DICE_LAYOUT[n] || [], fill(alt, { n }), 'stadium--dice', screen);
 
 /* ---------- Broadcast score bug ---------- */
 export function scoreBug({ home, away, mid, min, label }) {
@@ -85,14 +93,12 @@ export function scoreBug({ home, away, mid, min, label }) {
   </div>`;
 }
 
-/* ---------- Dice cube ---------- */
-const pips = (n) => {
-  const pos = n === 2 ? [[28, 28], [72, 72]] : [[26, 26], [50, 50], [74, 74]];
-  return `<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">${pos.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="10" fill="currentColor"/>`).join('')}</svg>`;
-};
+/* ---------- Dice cube (physical die: rounded faces, recessed pips, solid core) ---------- */
+const PIPS = { 2: [1, 9], 3: [1, 5, 9] }; // cells of a 3 x 3 grid
+const pips = (n) => `<span class="pips">${Array.from({ length: 9 }, (_, k) => `<i class="${PIPS[n].includes(k + 1) ? 'pip' : ''}"></i>`).join('')}</span>`;
 export const DICE_FACES = ['logo', '2', '3', 'logo', '2', '3']; // front, right, top, back, left, bottom
 const FACE_CLASSES = ['f-front', 'f-right', 'f-top', 'f-back', 'f-left', 'f-bottom'];
-const faceMarkup = (f) => (f === 'logo' ? BADGE : pips(Number(f)));
+const faceMarkup = (f) => (f === 'logo' ? `<span class="die-logo">${BADGE}</span>` : pips(Number(f)));
 
 /* ---------- Timeline constants ---------- */
 const SEG_FR = [5, 12, 3, 3, 13, 5];
@@ -198,15 +204,20 @@ function cards(c) {
         <button type="button" class="kx-card" aria-pressed="false" aria-label="${esc(fill(s.aria, { name: card.name }))}">
           <span class="kx-card__inner">
             <span class="kx-card__face kx-card__front">
-              <span class="card-no">${String(i + 1).padStart(2, '0')}/07</span>
-              <span class="kx-card__title">${esc(card.name)}</span>
-              <span class="kx-card__icon"><svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true" focusable="false">${ICONS[card.id] || ''}</svg></span>
-              <span class="kx-card__hint">${esc(s.hint)}</span>
+              <span class="cf">
+                <span class="cf-top"><span class="card-no">${String(i + 1).padStart(2, '0')}<em>/07</em></span><span class="cf-tag">${esc(s.label)}</span></span>
+                <span class="cf-art">${cardArt(card.id)}</span>
+                <span class="kx-card__title">${esc(card.name)}</span>
+                <span class="kx-card__hint">${esc(s.hint)}</span>
+              </span>
             </span>
             <span class="kx-card__face kx-card__back">
-              <strong>${esc(card.name)}</strong>
-              <p>${esc(card.body)}</p>
-              <span class="card-window">${esc(s.window)}</span>
+              <span class="cb">
+                <span class="card-no">${String(i + 1).padStart(2, '0')}<em>/07</em></span>
+                <strong>${esc(card.name)}</strong>
+                <span class="cb-body">${esc(card.body)}</span>
+                <span class="card-window">${esc(s.window)}</span>
+              </span>
             </span>
           </span>
         </button>
@@ -225,9 +236,13 @@ function dice(c) {
     <div class="dice-box" data-dice>
       <div class="dice-stage">
         <div class="cube-scene" aria-hidden="true">
-          <div class="cube" data-cube>
-            ${DICE_FACES.map((f, i) => `<div class="cube-face ${FACE_CLASSES[i]}">${faceMarkup(f)}</div>`).join('')}
+          <div class="die-lift" data-dice-lift>
+            <div class="cube" data-cube>
+              ${FACE_CLASSES.map((c) => `<i class="core ${c}"></i>`).join('')}
+              ${DICE_FACES.map((f, i) => `<div class="cube-face ${FACE_CLASSES[i]}">${faceMarkup(f)}</div>`).join('')}
+            </div>
           </div>
+          <i class="die-shadow" data-dice-shadow></i>
         </div>
         <button type="button" class="kx-btn kx-btn--primary" data-roll>${esc(s.button)}</button>
         <p class="fine">${esc(s.odds)}</p>

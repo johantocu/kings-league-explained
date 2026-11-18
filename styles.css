@@ -53,7 +53,7 @@ h3 { margin: 0; }
 .byline-for { color: var(--gold); }
 .byline-sub { margin-top: var(--space-2); }
 @media (max-width: 559.98px) { .byline-sep { display: none; } .byline-for { flex-basis: 100%; } }
-.hero-art { width: 100%; max-width: 520px; }
+.hero-art { width: 100%; max-width: 580px; }
 @media (min-width: 900px) {
   .hero { padding-top: var(--space-18); }
   .hero .kx-h1 { font-size: 112px; }
@@ -62,16 +62,6 @@ h3 { margin: 0; }
 }
 @media (max-width: 760px) { .hero .kx-h1 { font-size: 56px; } }
 @media (max-width: 380px) { .hero .kx-h1 { font-size: 50px; } }
-
-/* ===== Arena pitch ===== */
-.arena { width: 100%; height: auto; border-radius: var(--radius-lg); border: 2px solid var(--led-blue); box-shadow: var(--glow-led); }
-.arena-lines { fill: none; stroke: rgba(255, 255, 255, 0.85); stroke-width: 1.5; }
-.arena-box rect { fill: var(--gold-tint); stroke: var(--gold); stroke-width: 2; filter: drop-shadow(0 0 4px rgba(244, 175, 35, 0.6)); }
-.arena-spot { fill: rgba(255, 255, 255, 0.85); }
-.gk-a, .pl-a { fill: var(--gold); }
-.gk-b, .pl-b { fill: var(--ground); stroke: var(--ink); stroke-width: 2.5; }
-.arena-dice .pl { animation: pop 0.45s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i) * 80ms); transform-box: fill-box; transform-origin: center; }
-@keyframes pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 /* ===== Ticker spacing ===== */
 .kx-ticker { margin-top: 0; }
@@ -136,49 +126,229 @@ h3 { margin: 0; }
   .tl-panel { padding: var(--space-8); min-height: 190px; }
 }
 
-/* ===== Secret cards: one row, scrolls sideways on phones ===== */
-.deck { display: flex; gap: var(--space-4); overflow-x: auto; padding: 6px 2px 14px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
-.deck li { scroll-snap-align: start; }
-.kx-card:focus-visible { outline-offset: 4px; }
-.card-no { position: relative; align-self: flex-start; font-family: var(--font-display); font-size: 14px; line-height: 1; color: var(--muted); }
-.kx-card__front { justify-content: flex-start; gap: 14px; }
-/* Fixed two-line title box so every icon sits at the same height, whatever the title length. */
-.kx-card__title {
-  font-size: 15px; max-width: 100%; overflow-wrap: anywhere;
-  min-height: 2.1em; display: flex; align-items: center; justify-content: center;
+/* ===== Stadium: one CSS 3D component for every pitch =====
+   All sizes use container units (cqw) so the hero and dice pitches scale identically. */
+.stadium {
+  position: relative; width: 100%; aspect-ratio: 16 / 10; container-type: inline-size; overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(70% 55% at 50% 30%, rgba(255, 244, 214, 0.07), transparent 70%),
+    radial-gradient(120% 90% at 50% 0%, #16181c 0%, #08090b 55%, #030303 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07), var(--lift);
 }
-.kx-card__front .kx-card__hint { margin-top: auto; }
-.kx-card:hover .kx-card__front { box-shadow: inset 0 0 0 2px var(--gold), var(--glow-gold); }
-.kx-card__back .card-window { font-family: var(--font-wide); font-stretch: 110%; font-weight: 800; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.35; opacity: 0.8; }
-@media (min-width: 1000px) { .deck { flex-wrap: wrap; overflow: visible; justify-content: center; max-width: 740px; margin-inline: auto; } }
+.st-scene { position: absolute; inset: 0; perspective: 150cqw; perspective-origin: 50% 8%; }
+.st-floor {
+  position: absolute; left: 10cqw; top: 12.5cqw; width: 80cqw; height: 45.6cqw;
+  transform-style: preserve-3d; transform: rotateX(52deg); transform-origin: 50% 50%;
+  background: linear-gradient(180deg, #121412, #0b0c0b);
+  box-shadow: 0 0 0 0.35cqw #1b1d1f, 0 3cqw 5cqw rgba(0, 0, 0, 0.8);
+}
+.st-floor i, .st-floor b { display: block; font-style: normal; }
 
-/* ===== Dice ===== */
+/* Grass: mowing stripes + turf grain + light pools from the floodlights */
+.st-pitch {
+  position: absolute; left: 7%; right: 7%; top: 10%; bottom: 10%; transform-style: preserve-3d;
+  background-image:
+    radial-gradient(42% 60% at 22% 30%, rgba(255, 250, 230, 0.10), transparent 70%),
+    radial-gradient(42% 60% at 78% 30%, rgba(255, 250, 230, 0.10), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.22)),
+    url("assets/textures/grass-noise.svg"),
+    repeating-linear-gradient(90deg, #22592a 0 7.1428%, #1b4b21 7.1428% 14.2857%);
+  background-size: auto, auto, auto, 9cqw 9cqw, auto;
+  background-blend-mode: normal, normal, normal, soft-light, normal;
+  box-shadow: inset 0 0 2.4cqw rgba(0, 0, 0, 0.5);
+}
+.st-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Perimeter walls with discreet ad panels and LED strips */
+.st-wall {
+  position: absolute; display: flex; gap: 0.35cqw; padding: 0.35cqw;
+  background: linear-gradient(180deg, #2b2e33 0%, #15171a 55%, #0b0c0d 100%);
+  border-top: 0.3cqw solid #60656c;
+  box-shadow: inset 0 -0.28cqw 0 rgba(244, 175, 35, 0.75);
+}
+.st-wall .ad { flex: 1; background: linear-gradient(180deg, #1a1c20, #0d0e10); border: 1px solid rgba(255, 255, 255, 0.06); }
+.st-wall .ad--stripe { background: repeating-linear-gradient(-60deg, rgba(244, 175, 35, 0.78) 0 0.45cqw, transparent 0.45cqw 1cqw) center / 3.2cqw 100% no-repeat, linear-gradient(180deg, #1a1c20, #0d0e10); }
+.st-wall--far { left: 0; right: 0; top: -4.6cqw; height: 4.6cqw; transform-origin: 50% 100%; transform: rotateX(-90deg); }
+.st-wall--near {
+  left: 0; right: 0; top: calc(100% - 2cqw); height: 2cqw; transform-origin: 50% 100%; transform: rotateX(-90deg);
+  background: linear-gradient(180deg, rgba(43, 46, 51, 0.92), rgba(11, 12, 13, 0.96));
+}
+.st-wall--left, .st-wall--right { top: 0; bottom: 0; width: 3.4cqw; flex-direction: column; box-shadow: inset -0.28cqw 0 0 rgba(51, 70, 255, 0.55); border-top: 0; }
+.st-wall--left { left: 0; transform-origin: 0 50%; transform: rotateY(-90deg); border-right: 0.3cqw solid #60656c; }
+.st-wall--right { right: 0; transform-origin: 100% 50%; transform: rotateY(90deg); border-left: 0.3cqw solid #60656c; box-shadow: inset 0.28cqw 0 0 rgba(51, 70, 255, 0.55); }
+
+/* Big screen on the far side shows the format in play */
+.st-screen {
+  position: absolute; left: 39%; width: 22%; top: -6cqw; height: 6cqw; display: grid; place-items: center;
+  transform-origin: 50% 100%; transform: translateY(-0.4cqw) translateZ(4.3cqw) rotateX(-90deg);
+  background: linear-gradient(180deg, #0c0d0f, #050505); border: 0.3cqw solid rgba(244, 175, 35, 0.85);
+  box-shadow: 0 0 1.4cqw rgba(244, 175, 35, 0.18);
+}
+.st-screen b { font-family: var(--font-display); font-weight: 400; font-size: 3.8cqw; line-height: 1; color: var(--gold); text-transform: uppercase; }
+
+/* Floodlight towers */
+.st-light { position: absolute; top: -18cqw; width: 4.6cqw; height: 18cqw; transform-origin: 50% 100%; transform: translateY(-1.4cqw) rotateX(-90deg); }
+.st-light--l { left: 1%; }
+.st-light--r { right: 1%; }
+.st-pole { position: absolute; left: 50%; bottom: 0; width: 0.5cqw; margin-left: -0.25cqw; height: 86%; background: repeating-linear-gradient(0deg, #444950 0 0.45cqw, #1d1f22 0.45cqw 0.85cqw); }
+.st-head {
+  position: absolute; top: 0; left: 0; right: 0; height: 2.8cqw; border-radius: 0.3cqw;
+  background: radial-gradient(circle, #fffdf6 0 34%, transparent 38%) 0 0 / 1.15cqw 1.4cqw, #2c2f34;
+  box-shadow: 0 0 1.8cqw 0.4cqw rgba(255, 250, 235, 0.32);
+}
+
+/* Small stand behind the far wall */
+.st-stands {
+  position: absolute; left: 6%; right: 6%; top: -8cqw; height: 8cqw; transform-origin: 50% 100%;
+  transform: translateY(-0.3cqw) translateZ(4.5cqw) rotateX(-36deg); opacity: 0.9;
+  background:
+    radial-gradient(circle, rgba(220, 225, 235, 0.16) 0 0.16cqw, transparent 0.2cqw) 0 0 / 0.9cqw 1.1cqw,
+    repeating-linear-gradient(180deg, #1c1e22 0 0.7cqw, #0e0f11 0.7cqw 1.1cqw);
+}
+
+/* Goals: front frame, side, top and back nets */
+.st-goal { position: absolute; top: calc(50% - 4.6cqw); width: 2.4cqw; height: 9.2cqw; transform-style: preserve-3d; --gh: 3.4cqw; }
+.st-goal--l { left: calc(7% - 2.4cqw); }
+.st-goal--r { left: 93%; }
+.st-goal i {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.42) 0 1px, transparent 1px 0.5cqw),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.42) 0 1px, transparent 1px 0.5cqw);
+}
+.st-goal .g-top { inset: 0; transform: translateZ(var(--gh)); }
+.st-goal .g-side--a { left: 0; right: 0; top: 0; height: var(--gh); transform-origin: 50% 0; transform: rotateX(90deg); }
+.st-goal .g-side--b { left: 0; right: 0; bottom: 0; height: var(--gh); transform-origin: 50% 100%; transform: rotateX(-90deg); }
+.st-goal .g-back, .st-goal .g-frame { top: 0; bottom: 0; width: var(--gh); }
+.st-goal .g-frame { background: none; border: 0.32cqw solid #f5f5f5; box-shadow: 0 0 0.3cqw rgba(0, 0, 0, 0.6); }
+.st-goal--l .g-back { left: 0; transform-origin: 0 50%; transform: rotateY(-90deg); }
+.st-goal--l .g-frame { right: 0; transform-origin: 100% 50%; transform: rotateY(90deg); border-right: 0; }
+.st-goal--r .g-back { right: 0; transform-origin: 100% 50%; transform: rotateY(90deg); }
+.st-goal--r .g-frame { left: 0; transform-origin: 0 50%; transform: rotateY(-90deg); border-left: 0; }
+
+/* Players: thick sports chips sitting on the grass plane */
+.st-pl { position: absolute; width: 3.3cqw; height: 3.3cqw; margin: -1.65cqw 0 0 -1.65cqw; transform-style: preserve-3d; }
+.st-pl i { position: absolute; inset: 0; border-radius: 50%; }
+.st-pl .pl-sh { transform: translate(0.45cqw, 0.55cqw) scale(1.2); background: radial-gradient(closest-side, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); }
+.st-pl .pl-l1 { transform: translateZ(0.22cqw); }
+.st-pl .pl-l2 { transform: translateZ(0.44cqw); }
+.st-pl .pl-l3 { transform: translateZ(0.66cqw); }
+.st-pl .pl-top { transform: translateZ(0.88cqw); }
+.st-pl--a .pl-l1, .st-pl--a .pl-l2, .st-pl--a .pl-l3 { background: #a06c06; }
+.st-pl--a .pl-top { background: radial-gradient(circle at 35% 30%, #ffe696 0%, #F4AF23 52%, #c48709 100%); box-shadow: inset 0 0 0 0.18cqw rgba(0, 0, 0, 0.22); }
+.st-pl--b .pl-l1, .st-pl--b .pl-l2, .st-pl--b .pl-l3 { background: #8f9194; box-shadow: 0 0 0 0.12cqw #161616; }
+.st-pl--b .pl-top { background: radial-gradient(circle at 35% 30%, #ffffff 0%, #eeeeee 55%, #cdcdcd 100%); box-shadow: inset 0 0 0 0.28cqw #161616; }
+.st-pl--gk { width: 3.6cqw; height: 3.6cqw; margin: -1.8cqw 0 0 -1.8cqw; }
+.st-pl--a.st-pl--gk .pl-top { box-shadow: inset 0 0 0 0.5cqw #F4AF23, inset 0 0 0 0.85cqw #111; }
+.st-pl--b.st-pl--gk .pl-top { box-shadow: inset 0 0 0 0.28cqw #161616, inset 0 0 0 0.7cqw #fff, inset 0 0 0 1cqw #161616; }
+.stadium--dice .st-pl { animation: pl-drop 0.55s cubic-bezier(.2, .8, .3, 1.15) both; animation-delay: calc(var(--i) * 90ms + 40ms); }
+@keyframes pl-drop { from { transform: translateZ(6cqw); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* Fewer decorative details on small pitches */
+@container (max-width: 430px) {
+  .st-stands { display: none; }
+  .st-head { box-shadow: 0 0 1.2cqw 0.2cqw rgba(255, 250, 235, 0.25); }
+}
+
+/* ===== Secret cards: premium collectible cards (one row, scrolls sideways on phones) ===== */
+.deck { display: flex; gap: var(--space-4); overflow-x: auto; padding: 10px 4px 18px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+.deck li { scroll-snap-align: start; }
+.kx-card { width: 186px; height: 276px; --dur-flip: 600ms; transition: transform 0.25s ease; }
+.kx-card:hover { transform: translateY(-4px); }
+.kx-card:focus-visible { outline-offset: 4px; }
+.kx-card__face {
+  padding: 0; box-shadow: none; text-align: left;
+  background: linear-gradient(135deg, #8d8f93 0%, #3a3c40 22%, #d9dadc 46%, #4a4c50 64%, #a5a7ab 84%, #3a3c40 100%);
+}
+.kx-card__front::before { display: none; }
+.kx-card .cf, .kx-card .cb {
+  position: absolute; inset: 1.5px; display: flex; flex-direction: column;
+  clip-path: polygon(13px 0, calc(100% - 13px) 0, 100% 13px, 100% calc(100% - 13px), calc(100% - 13px) 100%, 13px 100%, 0 calc(100% - 13px), 0 13px);
+  background: url("assets/textures/grain.svg"), linear-gradient(180deg, #171717 0%, #070707 100%);
+}
+.kx-card .cf { padding: 12px; gap: 10px; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55); }
+.kx-card:hover .kx-card__front { filter: brightness(1.06); }
+.cf-top { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; }
+.card-no { font-family: var(--font-display); font-size: 18px; line-height: 1; color: var(--ink); }
+.card-no em { font-style: normal; font-size: 12px; color: var(--gold); }
+.cf-tag { font-family: var(--font-wide); font-stretch: 112%; font-weight: 800; font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.cf-art {
+  position: relative; display: block; height: 128px; overflow: hidden; border-radius: 6px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14), 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+.cf-art::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); }
+.card-art { display: block; width: 100%; height: 100%; }
+/* Fixed two-line title box so every illustration and title line up across the deck. */
+.kx-card__title {
+  font-size: 16px; max-width: 100%; overflow-wrap: anywhere; color: var(--ink);
+  min-height: 2.1em; display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.kx-card__hint { margin-top: auto; text-align: center; }
+.kx-card__back { background: linear-gradient(135deg, #8d8f93 0%, #3a3c40 22%, #d9dadc 46%, #4a4c50 64%, #a5a7ab 84%, #3a3c40 100%); color: var(--ink); }
+.kx-card .cb { padding: 16px 14px 14px; gap: 9px; background: url("assets/textures/grain.svg"), linear-gradient(180deg, #1d1d1d 0%, #0b0b0b 100%); }
+.kx-card .cb::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--gold); }
+.kx-card .cb strong { margin-top: 4px; font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1; text-transform: uppercase; color: var(--gold); }
+.cb-body { font-size: 13.5px; line-height: 1.45; font-weight: 500; color: var(--ink-soft); }
+.kx-card .card-window { margin-top: auto; font-family: var(--font-wide); font-stretch: 110%; font-weight: 800; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.35; color: var(--muted); }
+@media (min-width: 1000px) { .deck { flex-wrap: wrap; overflow: visible; justify-content: center; max-width: 820px; margin-inline: auto; } }
+
+/* ===== Dice: matte black die with recessed gold pips ===== */
 .dice-box { display: grid; gap: var(--space-6); padding: var(--space-6) var(--space-4); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
-.dice-stage { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.cube-scene { width: 120px; height: 120px; perspective: 700px; margin: 24px 0 26px; }
-.cube { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(-20deg) rotateY(30deg); transition: transform .8s cubic-bezier(.15, .65, .2, 1); }
+.dice-stage {
+  display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 8px 0;
+  background: radial-gradient(60% 55% at 62% 38%, rgba(255, 176, 80, 0.09), transparent 70%);
+}
+.cube-scene { position: relative; width: 120px; height: 120px; perspective: 800px; margin: 34px 0 40px; --half: 60px; }
+.die-lift { position: absolute; inset: 0; transform-style: preserve-3d; }
+.die-lift.is-rolling { animation: die-lift 1s cubic-bezier(.3, .6, .3, 1) both; }
+@keyframes die-lift {
+  0% { transform: none; } 22% { transform: translateY(-40px); } 60% { transform: translateY(-14px); }
+  82% { transform: translateY(2px); } 92% { transform: translateY(-3px); } 100% { transform: none; }
+}
+.cube { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(-20deg) rotateY(28deg); transition: transform 1s cubic-bezier(.18, .7, .22, 1); }
+/* Solid inner core: six square faces just inside the rounded ones, so no gaps show at the edges. */
+.cube .core { position: absolute; inset: 0; display: block; background: #070707; --half-in: calc(var(--half) - 2px); }
+.cube .core.f-front { transform: translateZ(var(--half-in)); }
+.cube .core.f-back { transform: rotateY(180deg) translateZ(var(--half-in)); }
+.cube .core.f-right { transform: rotateY(90deg) translateZ(var(--half-in)); }
+.cube .core.f-left { transform: rotateY(-90deg) translateZ(var(--half-in)); }
+.cube .core.f-top { transform: rotateX(90deg) translateZ(var(--half-in)); }
+.cube .core.f-bottom { transform: rotateX(-90deg) translateZ(var(--half-in)); }
 .cube-face {
-  position: absolute; inset: 0; display: grid; place-items: center;
-  background: var(--ground); color: var(--gold);
-  border: 2px solid var(--gold); border-radius: 18px; box-shadow: inset 0 0 26px rgba(244, 175, 35, 0.12);
+  position: absolute; inset: 0; display: grid; place-items: center; border-radius: 13%;
+  background: url("assets/textures/grain.svg"), radial-gradient(circle at 30% 25%, #363636 0%, #181818 50%, #080808 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 -6px 14px rgba(0, 0, 0, 0.55), inset 0 5px 10px rgba(255, 255, 255, 0.07);
   backface-visibility: hidden; -webkit-backface-visibility: hidden;
 }
-.cube-face svg { width: 60%; height: 60%; }
-.f-front { transform: translateZ(60px); }
-.f-back { transform: rotateY(180deg) translateZ(60px); }
-.f-right { transform: rotateY(90deg) translateZ(60px); }
-.f-left { transform: rotateY(-90deg) translateZ(60px); }
-.f-top { transform: rotateX(90deg) translateZ(60px); }
-.f-bottom { transform: rotateX(-90deg) translateZ(60px); }
+.f-top { background: url("assets/textures/grain.svg"), radial-gradient(circle at 40% 30%, #444 0%, #1e1e1e 55%, #0b0b0b 100%); }
+.f-right { background: url("assets/textures/grain.svg"), linear-gradient(90deg, rgba(255, 170, 70, 0), rgba(255, 170, 70, 0.12)), radial-gradient(circle at 30% 25%, #303030 0%, #151515 55%, #070707 100%); }
+.f-front { transform: translateZ(var(--half)); }
+.f-back { transform: rotateY(180deg) translateZ(var(--half)); }
+.f-right { transform: rotateY(90deg) translateZ(var(--half)); }
+.f-left { transform: rotateY(-90deg) translateZ(var(--half)); }
+.f-top { transform: rotateX(90deg) translateZ(var(--half)); }
+.f-bottom { transform: rotateX(-90deg) translateZ(var(--half)); }
+.pips { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); width: 72%; height: 72%; }
+.pips i { display: block; }
+.pips .pip {
+  width: 66%; aspect-ratio: 1; place-self: center; border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #ffe28e 0%, #F4AF23 45%, #a36b04 100%);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.55), inset 0 -1px 1px rgba(255, 255, 255, 0.35), 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+.die-logo { display: block; width: 62%; height: 62%; color: var(--gold); filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.85)); }
+.die-logo svg { width: 100%; height: 100%; }
+.die-shadow { position: absolute; left: 6%; right: 6%; bottom: -30px; height: 22px; display: block; border-radius: 50%; background: radial-gradient(closest-side, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); }
+.die-shadow.is-rolling { animation: die-shadow 1s cubic-bezier(.3, .6, .3, 1) both; }
+@keyframes die-shadow { 22% { transform: scale(0.55); opacity: 0.45; } 60% { transform: scale(0.82); opacity: 0.7; } 82% { transform: scale(1.04); opacity: 1; } 100% { transform: none; opacity: 1; } }
 .dice-result { display: flex; flex-direction: column; gap: var(--space-4); padding: 20px; background: var(--ground); border: 1px solid var(--line); border-radius: var(--radius-lg); }
 .dice-text { margin: 0; min-height: 3.2em; color: var(--ink-soft); }
 @media (min-width: 800px) {
   .dice-box { grid-template-columns: 1fr 1.3fr; align-items: center; padding: var(--space-8); gap: var(--space-8); }
-  .cube-scene { width: 150px; height: 150px; margin: 36px 0 40px; }
-  .f-front { transform: translateZ(75px); } .f-back { transform: rotateY(180deg) translateZ(75px); }
-  .f-right { transform: rotateY(90deg) translateZ(75px); } .f-left { transform: rotateY(-90deg) translateZ(75px); }
-  .f-top { transform: rotateX(90deg) translateZ(75px); } .f-bottom { transform: rotateX(-90deg) translateZ(75px); }
+  .cube-scene { width: 150px; height: 150px; margin: 44px 0 50px; --half: 75px; }
 }
+
 
 /* ===== Paper band + table ===== */
 .kx-paper .kx-lead { color: #313131; }
