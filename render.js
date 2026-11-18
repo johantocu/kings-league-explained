@@ -123,7 +123,8 @@ function hero(c) {
       <div class="hero-grid">
         <div>
           <p class="kx-lead">${esc(h.subtitle)}</p>
-          <p class="byline"><span class="byline-name">${esc(h.byline)}</span><span aria-hidden="true">·</span><span class="byline-date">${esc(h.updated)}</span></p>
+          <p class="byline"><span class="byline-name">${esc(h.byline)}</span>${h.forLine ? `<span class="byline-sep" aria-hidden="true">·</span><span class="byline-for">${esc(h.forLine)}</span>` : ''}</p>
+          <p class="byline byline-sub"><span class="byline-date">${esc(h.updated)}</span></p>
         </div>
         <div class="hero-art">${heroPitch(c.ui.pitchAlt)}</div>
       </div>

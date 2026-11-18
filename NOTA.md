@@ -2,14 +2,17 @@
 
 **Time spent:** [XX]
 
-**Why this topic:** The Kings League sits exactly where sport, entertainment and gaming meet: real football, streamer presidents and rules that work like a video game. I build a booking platform for five-a-side football in Bogotá, so small-sided formats are my world, and Colombia reached the 2025 Kings World Cup Nations final. The format is evergreen (how it works, why it works) and still growing.
+**Why this topic:** It fits Sports ("a sport people are discovering") and crosses into Games: the Gaming, Entertainment & Sport mix of this role. I'm Colombian and I'm building a five-a-side booking platform, and Colombia played the 2025 Kings World Cup Nations final. The format is evergreen and growing.
 
-**Tools:** Claude Code (Anthropic) to research, fact-check, write, translate, code and deploy. Vercel for hosting.
+**Tools:** Claude (research, design system, context files) and Claude Code (writing, code, Vercel deploy).
 
-**Key prompts:**
-[pegar aquí mis 2-3 prompts reales]
+**Key prompts** (verbatim, Spanish):
+1. "revisa el contexto y luego mira la instruccion de lo que debemos hacer en el prompt que cargue" (pointing to my step-by-step brief)
+2. "contexto revisa el prompt y actualiza el sistema de diseñp, cambialo por este nuevo que es el de la kings league"
+3. "Revisé la página publicada contra el brief de Paradise Media. Hay que hacer estos ajustes…"
 
-**What I changed:**
-[lo que yo edité]
+[pegar el prompt de Claude para el sistema de diseño, si aplica]
 
-**Facts checked:** Every rule was checked against the official Kings League rules page ("How Kings is played", archived 27 Oct 2026) and cross-checked with Wikipedia. Results, expansion dates and presidents were checked against Wikipedia, the Kings League site, Streams Charts, DAZN's press release and ESPN, all on 18 November 2026. Anything I couldn't confirm (for example, one streamer listed as a team president) was cut. The full log, with a URL for each fact, is in FACTCHECK.md.
+**What I changed:** [lo que yo edité]
+
+**Facts checked:** Every rule against the official kingsleague.pro rules page (archived copy, 27 Oct 2026), cross-checked with Wikipedia. Results against official Kings League news and Wikipedia; expansion and broadcast against Streams Charts, DAZN and ESPN. All on 18 Nov 2026; anything unconfirmed was cut. Full log: FACTCHECK.md.

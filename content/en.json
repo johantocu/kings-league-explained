@@ -2,7 +2,7 @@
   "meta": {
     "lang": "en",
     "title": "Kings League, Explained: The Football League Built Like a Video Game",
-    "description": "How Gerard Piqué's 7-a-side Kings League works: the Scale-Up, secret cards, the dice, Matchball Mode, the streamer presidents and why millions watch. Interactive guide.",
+    "description": "How Gerard Piqué's 7-a-side Kings League works: the Scale-Up, secret cards, the dice, Matchball Mode, the streamer presidents and why so many watch. Interactive guide.",
     "ogTitle": "Kings League, Explained",
     "ogDescription": "Secret cards, a giant dice and streamer presidents. An interactive guide to the football league built like a video game."
   },
@@ -27,11 +27,12 @@
   "hero": {
     "kicker": "Explainer · Sport × Entertainment × Gaming",
     "title": "Kings League, Explained: The Football League Built Like a Video Game",
-    "subtitle": "Seven a side, 36 minutes, secret cards and a giant dice. How it works, and why millions tune in.",
+    "subtitle": "Seven a side, 36 minutes, secret cards and a giant dice. How it works, and why so many tune in.",
     "byline": "By Johan Torres",
     "readTime": "7 min read",
     "updated": "Rules verified 18 Nov 2026",
-    "titleGold": "Video Game"
+    "titleGold": "Video Game",
+    "forLine": "Writing test for Paradise Media"
   },
   "intro": {
     "paragraphs": [
@@ -202,7 +203,7 @@
       ],
       [
         "Clock",
-        "Runs nonstop. Stops only for medical help, VAR, cards and time-wasting",
+        "Runs nonstop. Stops only for medical help, VAR, secret cards, President Penalties and time-wasting",
         "Runs; the referee adds stoppage time"
       ],
       [
@@ -254,31 +255,11 @@
             "name": "Gaules",
             "initials": "GA",
             "team": "G3X FC"
-          },
-          {
-            "name": "Kameto",
-            "initials": "KA",
-            "team": "Karasu"
-          },
-          {
-            "name": "Fedez",
-            "initials": "FE",
-            "team": "Boomers"
-          },
-          {
-            "name": "Jon Vlogs",
-            "initials": "JV",
-            "team": "Capim FC"
-          },
-          {
-            "name": "Adin Ross",
-            "initials": "AR",
-            "team": "Miami 7 (co-owner)"
           }
         ]
       },
       {
-        "title": "Ex-players and celebrities",
+        "title": "Football stars",
         "people": [
           {
             "name": "Iker Casillas",
@@ -294,41 +275,6 @@
             "name": "Neymar",
             "initials": "NE",
             "team": "FURIA FC"
-          },
-          {
-            "name": "Javier \"Chicharito\" Hernández",
-            "initials": "JH",
-            "team": "Olimpo United"
-          },
-          {
-            "name": "Maluma",
-            "initials": "MA",
-            "team": "Medallo City"
-          },
-          {
-            "name": "Mario Götze",
-            "initials": "MG",
-            "team": "Vice Versa FC"
-          },
-          {
-            "name": "Rio Ferdinand",
-            "initials": "RF",
-            "team": "FIVE FC (World Cup 2024)"
-          },
-          {
-            "name": "Eden Hazard",
-            "initials": "EH",
-            "team": "Deptostra FC (World Cup 2024)"
-          },
-          {
-            "name": "Andriy Shevchenko",
-            "initials": "AS",
-            "team": "UA Steel (World Cup 2024)"
-          },
-          {
-            "name": "Jake Paul",
-            "initials": "JP",
-            "team": "Miami 7 (co-owner)"
           }
         ]
       },
@@ -344,16 +290,6 @@
             "name": "Kaká",
             "initials": "KK",
             "team": "Kings League Brazil"
-          },
-          {
-            "name": "Bastian Schweinsteiger",
-            "initials": "BS",
-            "team": "Kings League Germany"
-          },
-          {
-            "name": "Ronaldo Nazário",
-            "initials": "RN",
-            "team": "Kings World Cup Nations 2026"
           }
         ]
       }

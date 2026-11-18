@@ -2,7 +2,7 @@
   "meta": {
     "lang": "es",
     "title": "La Kings League, explicada: la liga de fútbol hecha como un videojuego",
-    "description": "Cómo funciona la Kings League de Gerard Piqué, la liga de fútbol 7: el Scale-Up, las cartas secretas, el dado, el Matchball, los presidentes streamers y por qué la ven millones. Guía interactiva.",
+    "description": "Cómo funciona la Kings League de Gerard Piqué, la liga de fútbol 7: el Scale-Up, las cartas secretas, el dado, el Matchball, los presidentes streamers y por qué la ve tanta gente. Guía interactiva.",
     "ogTitle": "La Kings League, explicada",
     "ogDescription": "Cartas secretas, un dado gigante y presidentes streamers. Una guía interactiva de la liga de fútbol hecha como un videojuego."
   },
@@ -27,11 +27,12 @@
   "hero": {
     "kicker": "Explicador · Deporte × Entretenimiento × Gaming",
     "title": "La Kings League, explicada: la liga de fútbol hecha como un videojuego",
-    "subtitle": "Siete contra siete, 36 minutos, cartas secretas y un dado gigante. Cómo funciona y por qué la ven millones.",
+    "subtitle": "Siete contra siete, 36 minutos, cartas secretas y un dado gigante. Cómo funciona y por qué la ve tanta gente.",
     "byline": "Por Johan Torres",
     "readTime": "7 min de lectura",
     "updated": "Reglas verificadas el 18 nov 2026",
-    "titleGold": "videojuego"
+    "titleGold": "videojuego",
+    "forLine": "Prueba de escritura para Paradise Media"
   },
   "intro": {
     "paragraphs": [
@@ -202,7 +203,7 @@
       ],
       [
         "Reloj",
-        "Corre sin parar. Solo se detiene por asistencia médica, VAR, cartas y pérdida de tiempo",
+        "Corre sin parar. Solo se detiene por asistencia médica, VAR, cartas secretas, Penales del Presidente y pérdida de tiempo",
         "Corre; el árbitro añade tiempo"
       ],
       [
@@ -254,31 +255,11 @@
             "name": "Gaules",
             "initials": "GA",
             "team": "G3X FC"
-          },
-          {
-            "name": "Kameto",
-            "initials": "KA",
-            "team": "Karasu"
-          },
-          {
-            "name": "Fedez",
-            "initials": "FE",
-            "team": "Boomers"
-          },
-          {
-            "name": "Jon Vlogs",
-            "initials": "JV",
-            "team": "Capim FC"
-          },
-          {
-            "name": "Adin Ross",
-            "initials": "AR",
-            "team": "Miami 7 (copropietario)"
           }
         ]
       },
       {
-        "title": "Exjugadores y famosos",
+        "title": "Estrellas del fútbol",
         "people": [
           {
             "name": "Iker Casillas",
@@ -294,41 +275,6 @@
             "name": "Neymar",
             "initials": "NE",
             "team": "FURIA FC"
-          },
-          {
-            "name": "Javier \"Chicharito\" Hernández",
-            "initials": "JH",
-            "team": "Olimpo United"
-          },
-          {
-            "name": "Maluma",
-            "initials": "MA",
-            "team": "Medallo City"
-          },
-          {
-            "name": "Mario Götze",
-            "initials": "MG",
-            "team": "Vice Versa FC"
-          },
-          {
-            "name": "Rio Ferdinand",
-            "initials": "RF",
-            "team": "FIVE FC (Mundial 2024)"
-          },
-          {
-            "name": "Eden Hazard",
-            "initials": "EH",
-            "team": "Deptostra FC (Mundial 2024)"
-          },
-          {
-            "name": "Andriy Shevchenko",
-            "initials": "AS",
-            "team": "UA Steel (Mundial 2024)"
-          },
-          {
-            "name": "Jake Paul",
-            "initials": "JP",
-            "team": "Miami 7 (copropietario)"
           }
         ]
       },
@@ -344,16 +290,6 @@
             "name": "Kaká",
             "initials": "KK",
             "team": "Kings League Brasil"
-          },
-          {
-            "name": "Bastian Schweinsteiger",
-            "initials": "BS",
-            "team": "Kings League Alemania"
-          },
-          {
-            "name": "Ronaldo Nazário",
-            "initials": "RN",
-            "team": "Kings World Cup Nations 2026"
           }
         ]
       }

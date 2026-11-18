@@ -14,7 +14,7 @@ The rules were then cross-checked against Wikipedia. Johan: open https://kingsle
 | Kick-off: ball dropped from a cage, one player per team races for it | Official rules (archive) | 18 Nov 2026 |
 | Scale-Up: 1v1 + keepers, one player added per team each minute, 7v7 by minute 5 | Official rules (archive) | 18 Nov 2026 |
 | Halves of 20 and 16 minutes, then Matchball Mode or Shootouts | Official rules (archive) | 18 Nov 2026 |
-| Clock runs continuously; starts on first touch; stops only for medical help called by the referee, VAR/table reviews, Secret Card or President Penalty executions, and time-wasting at the referee's discretion | Official rules (archive) | 18 Nov 2026 |
+| Clock runs continuously; starts on first touch; stops only for medical help called by the referee, VAR/table reviews, Secret Card or President Penalty executions, and time-wasting at the referee's discretion (the comparison table now says "secret cards, President Penalties", to match) | Official rules (archive) | 18 Nov 2026 |
 | Double goals 17'–20' with a different-coloured ball, no added time | Official rules (archive); Wikipedia ("final 3 minutes of the first half" in 2025/26) | 18 Nov 2026 |
 | Secret Card drawn at random before the match, usable 5'–17' and 23'–36' | Official rules (archive) | 18 Nov 2026 |
 | 7 cards: Goal x2 (4 min), Suspension (4 min, not the keeper), Star Player (first goal counts double, armband), Shootout (5 s from midfield), Joker (any card or steal rival's), Reverse Penalty, Penalty | Official rules (archive); Wikipedia | 18 Nov 2026 |
@@ -90,6 +90,18 @@ The rules were then cross-checked against Wikipedia. Johan: open https://kingsle
 | Ronaldo Nazário | KWC Nations 2026 | Streams Charts |
 
 **Removed:** Papaplatte. Sources show him playing/streaming in the German league, but none confirm him as a team president.
+
+**Mario Götze, re-checked 18 Nov 2026.** Both teams are supported, at different times:
+- Kings World Cup Clubs 2024: co-president of **Youniors FC** with Younes Zarou (Wikipedia, 2024 Kings World Cup; Soccerway: https://es.soccerway.com/noticias/mario-gotze-se-apunta-a-la-locura-de-la-kings-world-cup/4Asz70HG).
+- Kings League Germany (from April 2025): listed with **Vice Versa FC**, alongside Ebru Önal, Abdallah Farah and Patrick Owomoyela (Wikipedia, Kings League, Germany table; GIGA: https://www.giga.de/entertainment/kings-league-deutschland-start-teams-und-alle-infos--01JQ8Y5R7F3BNS2PN41D7BN7VW).
+- Result: no error, but he was **cut from the article** when the list was trimmed (below).
+
+**Trimmed list (18 Nov 2026).** The article now shows 8 presidents only, all verified above:
+- Streamers: Ibai Llanos (Porcinos FC), TheGrefg (Saiyans FC), Gaules (G3X FC)
+- Football stars: Iker Casillas (1K FC), Sergio Agüero (Kunisports), Neymar (FURIA FC)
+- League presidents: Zlatan Ibrahimović (Kings League Italy and the Kings World Cup), Kaká (Kings League Brazil)
+
+The group was renamed from "Ex-players and celebrities" to "Football stars", because Neymar is not a retired player. The other names in the table above are kept as research notes and no longer appear in the article.
 
 ## Source URLs
 
