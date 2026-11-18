@@ -1,0 +1,294 @@
+{
+  "meta": {
+    "lang": "en",
+    "title": "Kings League, Explained: The Football League Built Like a Video Game",
+    "description": "How Gerard Piqué's 7-a-side Kings League works: the Scale-Up, secret cards, the dice, Matchball Mode, the streamer presidents and why millions watch. Interactive guide.",
+    "ogTitle": "Kings League, Explained",
+    "ogDescription": "Secret cards, a giant dice and streamer presidents. An interactive guide to the football league built like a video game."
+  },
+  "ui": {
+    "skip": "Skip to article",
+    "langLabel": "Language",
+    "siteName": "Kings League, Explained",
+    "pitchAlt": "Illustration of a seven-a-side pitch with seven players on each team"
+  },
+  "hero": {
+    "kicker": "Explainer · Sport × Entertainment × Gaming",
+    "title": "Kings League, Explained: The Football League Built Like a Video Game",
+    "subtitle": "Seven a side, 36 minutes, secret cards and a giant dice. How it works, and why millions tune in.",
+    "byline": "By Johan Torres",
+    "readTime": "7 min read",
+    "updated": "Rules verified 18 Nov 2026"
+  },
+  "intro": {
+    "paragraphs": [
+      "Picture a Tuesday night five-a-side game, then hand the rulebook to a room full of streamers. That's more or less the Kings League. Gerard Piqué, the former Barcelona and Spain defender, presented it on 10 November 2022: seven against seven, short halves, and rules that sound like they came out of a video game menu. Coaches hold secret cards. A giant dice decides how many players stay on the pitch. Team presidents can walk down from the stands and take a penalty.",
+      "It works because it lives where people already watch. Every match streams free on Twitch, YouTube and TikTok, and on the channels of presidents who bring their own millions of followers. In the first season in Spain, a single matchday-three game passed 1.3 million viewers. I'm Colombian and I come from five-a-side football (I'm building a booking platform for small-sided games in Bogotá), so I paid close attention when Colombia made the final of the Kings World Cup Nations in January 2025. We lost 6–2 to Brazil in Turin. Still, a final."
+    ]
+  },
+  "numbers": {
+    "kicker": "By the numbers",
+    "title": "Kings League in numbers",
+    "items": [
+      { "value": "7v7", "label": "Players a side once the Scale-Up is done (it starts at 1v1)" },
+      { "value": "36'", "label": "Minutes of regulated time: a 20-minute half and a 16-minute half" },
+      { "value": "7", "label": "Secret cards in the 2025/26 deck" },
+      { "value": "1.3M+", "label": "Viewers for one game in season one (Spain, matchday 3)" }
+    ],
+    "note": "Rules as of the 2025/26 season. Audience figure from the 2023 season in Spain."
+  },
+  "timeline": {
+    "kicker": "Minute by minute",
+    "title": "Anatomy of a match",
+    "lead": "A Kings League game is a sequence of short phases, each with its own rule. Tap or hover a phase to see what happens.",
+    "hint": "Tap a phase",
+    "segments": [
+      { "range": "0'–5'", "short": "Scale-Up", "title": "Scale-Up: from 1v1 to 7v7", "body": "It starts 1v1 plus keepers: the ball drops from a cage and both players sprint for it. Every minute each side adds a player: 2v2, 3v3, and so on until it's 7v7 at minute 5." },
+      { "range": "5'–17'", "short": "Cards", "title": "First card window", "body": "Coaches can press the green button to play their secret card. A president who is in the stadium can press the blue one for a President Penalty." },
+      { "range": "17'–20'", "short": "x2", "title": "Double goals", "body": "A ball of a different colour comes on and every goal counts double until half-time. There's no added time, so the last seconds before the break get chaotic." },
+      { "range": "20'–23'", "short": "Dice", "title": "Half-time and the dice", "body": "The second half opens with a roll of a giant dice. Logo means 1v1, a 2 means 2v2, a 3 means 3v3, always plus keepers. By minute 23 everyone is back on." },
+      { "range": "23'–36'", "short": "Cards", "title": "Second card window", "body": "Secret cards and President Penalties are live again. Teams that saved their card for a tight finish use it here." },
+      { "range": "36'+", "short": "End", "title": "Matchball Mode or shootouts", "body": "Level at 36? Straight to shootouts. Someone ahead? Matchball Mode: if the leader scores, it's over. If the trailing team equalises, the next goal wins. Meanwhile it's a Scale-Down, from 5v5 losing one player a side every minute down to 1v1." }
+    ]
+  },
+  "cards": {
+    "kicker": "The deck",
+    "title": "The secret cards",
+    "lead": "Before kick-off each coach draws one card at random. Nobody knows what the other bench is holding. Tap a card to flip it.",
+    "hint": "Tap to flip",
+    "label": "Secret card",
+    "window": "Play it 5'–17' or 23'–36'",
+    "items": [
+      { "id": "x2", "name": "Goal x2", "body": "Every goal your team scores counts double for the next four minutes." },
+      { "id": "suspension", "name": "Suspension", "body": "Pick a rival (any player except the keeper). They sit out for four minutes." },
+      { "id": "star", "name": "Star Player", "body": "Choose one player. Their first goal counts double. They wear an armband so everyone knows who it is." },
+      { "id": "shootout", "name": "Shootout", "body": "Ball on the centre spot. One of your players gets five seconds to beat the keeper one on one." },
+      { "id": "joker", "name": "Joker", "body": "Play it as any of the other cards, or steal the card your rival is holding." },
+      { "id": "reverse", "name": "Reverse Penalty", "body": "Fans voted it in for 2025/26. You pick a rival to take a penalty. If they score, it doesn't count. If they miss, the goal is yours." },
+      { "id": "penalty", "name": "Penalty", "body": "A traditional penalty kick. The most normal thing in the deck." }
+    ]
+  },
+  "dice": {
+    "kicker": "Minute 20",
+    "title": "Roll the dice",
+    "lead": "The second half starts with a giant dice. It has three faces, each printed twice: a logo, a 2 and a 3. Whatever lands decides how many outfield players each team keeps for three minutes.",
+    "button": "Roll",
+    "again": "Roll again",
+    "rolling": "Rolling…",
+    "prompt": "Press Roll to start the second half.",
+    "resultLabel": "Result",
+    "faces": {
+      "logo": { "label": "1v1", "text": "Logo: one outfield player each, plus keepers. Acres of space." },
+      "2": { "label": "2v2", "text": "Two each, plus keepers. Give-and-go football." },
+      "3": { "label": "3v3", "text": "Three each, plus keepers. The closest thing to a street game." }
+    },
+    "odds": "Each result has the same chance: 2 in 6.",
+    "logoNote": "The logo on this dice is a generic badge made for this page, not the league's.",
+    "pitchAlt": "Pitch diagram showing {n} outfield players per team plus goalkeepers"
+  },
+  "compare": {
+    "kicker": "Side by side",
+    "title": "Kings League vs traditional football",
+    "lead": "Same ball, same goals. Almost everything else is different.",
+    "scrollHint": "Swipe the table sideways",
+    "headers": ["", "Kings League", "Traditional football"],
+    "rows": [
+      ["Players", "7v7, after a Scale-Up from 1v1", "11v11 from kick-off"],
+      ["Duration", "20 + 16 minutes, then Matchball Mode or shootouts", "45 + 45 minutes, plus stoppage time"],
+      ["Clock", "Runs nonstop. Stops only for medical help, VAR, cards and time-wasting", "Runs; the referee adds stoppage time"],
+      ["Substitutions", "Unlimited", "A fixed number per match"],
+      ["Cards", "Yellow: 2 minutes out. Red: a player down for 5 minutes, then a replacement", "Yellow is a warning. Red: off, and the team stays a player down"],
+      ["Draws", "Never. Level at 36' means shootouts", "Allowed in league games"],
+      ["Special rules", "Secret cards, President Penalty, double goals, the dice, Matchball", "None"],
+      ["Who's in charge", "Team presidents (streamers and ex-pros); fans vote on new rules", "Clubs and federations; IFAB writes the Laws of the Game"]
+    ]
+  },
+  "presidents": {
+    "kicker": "The owners",
+    "title": "Who runs the teams",
+    "lead": "Every team has a president, and most of them are famous for something other than football admin. That's the point: they bring the audience.",
+    "groups": [
+      {
+        "title": "Streamers and creators",
+        "people": [
+          { "name": "Ibai Llanos", "initials": "IL", "team": "Porcinos FC" },
+          { "name": "TheGrefg", "initials": "TG", "team": "Saiyans FC" },
+          { "name": "Gaules", "initials": "GA", "team": "G3X FC" },
+          { "name": "Kameto", "initials": "KA", "team": "Karasu" },
+          { "name": "Fedez", "initials": "FE", "team": "Boomers" },
+          { "name": "Jon Vlogs", "initials": "JV", "team": "Capim FC" },
+          { "name": "Adin Ross", "initials": "AR", "team": "Miami 7 (co-owner)" }
+        ]
+      },
+      {
+        "title": "Ex-players and celebrities",
+        "people": [
+          { "name": "Iker Casillas", "initials": "IC", "team": "1K FC" },
+          { "name": "Sergio Agüero", "initials": "SA", "team": "Kunisports" },
+          { "name": "Neymar", "initials": "NE", "team": "FURIA FC" },
+          { "name": "Javier \"Chicharito\" Hernández", "initials": "JH", "team": "Olimpo United" },
+          { "name": "Maluma", "initials": "MA", "team": "Medallo City" },
+          { "name": "Mario Götze", "initials": "MG", "team": "Vice Versa FC" },
+          { "name": "Rio Ferdinand", "initials": "RF", "team": "FIVE FC (World Cup 2024)" },
+          { "name": "Eden Hazard", "initials": "EH", "team": "Deptostra FC (World Cup 2024)" },
+          { "name": "Andriy Shevchenko", "initials": "AS", "team": "UA Steel (World Cup 2024)" },
+          { "name": "Jake Paul", "initials": "JP", "team": "Miami 7 (co-owner)" }
+        ]
+      },
+      {
+        "title": "League presidents",
+        "people": [
+          { "name": "Zlatan Ibrahimović", "initials": "ZI", "team": "Kings League Italy and the Kings World Cup" },
+          { "name": "Kaká", "initials": "KK", "team": "Kings League Brazil" },
+          { "name": "Bastian Schweinsteiger", "initials": "BS", "team": "Kings League Germany" },
+          { "name": "Ronaldo Nazário", "initials": "RN", "team": "Kings World Cup Nations 2026" }
+        ]
+      }
+    ],
+    "note": "Presidents change between seasons. Names and teams checked November 2026."
+  },
+  "expansion": {
+    "kicker": "2022 → 2026",
+    "title": "From Barcelona to the world",
+    "lead": "In four years the format went from one league in Spain to seven regions and two World Cups. A US league was announced in June 2025; as of November 2026 it isn't on the official list yet.",
+    "years": [
+      {
+        "year": "2022",
+        "events": [
+          { "date": "Nov", "text": "Piqué presents the Kings League in Spain." }
+        ]
+      },
+      {
+        "year": "2023",
+        "events": [
+          { "date": "Feb", "text": "The Queens League, the women's version, kicks off." },
+          { "date": "Mar", "text": "Final Four at the Camp Nou in front of more than 92,000 fans." },
+          { "date": "Jul", "text": "Kings League Américas is announced." }
+        ]
+      },
+      {
+        "year": "2024",
+        "events": [
+          { "date": "", "text": "Américas starts play in Mexico City." },
+          { "date": "", "text": "First Kings World Cup Clubs, in Mexico: Porcinos FC beat G3X FC 5–3 in Monterrey." },
+          { "date": "Nov", "text": "Italy: 12 clubs, based in Milan." }
+        ]
+      },
+      {
+        "year": "2025",
+        "events": [
+          { "date": "Jan", "text": "Kings World Cup Nations in Italy: Brazil beat Colombia 6–2 in the final.", "highlight": true },
+          { "date": "Mar", "text": "Brazil launches with 10 teams." },
+          { "date": "Apr", "text": "France (Villepinte) and Germany (Cologne) kick off." },
+          { "date": "", "text": "Kings World Cup Clubs in France: Los Troncos FC beat Porcinos FC 6–3." },
+          { "date": "Oct", "text": "MENA starts in Saudi Arabia, part of Riyadh Season. Autumn Kings Cups replace the old splits." }
+        ]
+      },
+      {
+        "year": "2026",
+        "events": [
+          { "date": "Jan", "text": "Nations in Brazil, 20 teams: Brazil win again, Chile runner-up." },
+          { "date": "Feb", "text": "The transfer market switches from a virtual budget to real money." },
+          { "date": "Aug", "text": "Clubs in Italy: G3X FC beat Alpak FC 9–5 in Milan, the first Brazilian champions." }
+        ]
+      }
+    ]
+  },
+  "quote": {
+    "text": "The rulebook works like patch notes. Fans vote, presidents argue, and next season plays by the result.",
+    "author": "Johan Torres"
+  },
+  "why": {
+    "kicker": "The analysis",
+    "title": "Why it works",
+    "paragraphs": [
+      { "heading": "Built for clips", "text": "A normal match asks for two hours of your attention. A Kings League game gives you a reason to look up every few minutes: the Scale-Up, a secret card, double goals, the dice, Matchball. Each one is a ready-made clip. That suits the way a lot of Gen Z follows sport, in short pieces on a phone, on TikTok and YouTube as much as on a TV. You can catch the last five minutes and still feel you saw the whole story." },
+      { "heading": "Presidents are the distribution", "text": "The presidents are the marketing. When Ibai or Gaules streams a match, the game lands on a channel whose audience was already there. The league doesn't have to build a fan base from zero in every country; it borrows one and turns it into a rivalry. It's also how the format travels. Italy, Brazil, France, Germany and MENA each got their own local creators and ex-players as presidents, not imports from Spain." },
+      { "heading": "Fans hold the controller", "text": "Then there's the vote. Fans have shaped the rules from the start, and the newest card, Reverse Penalty, won a public vote for 2025/26. That turns viewers into stakeholders. Like a patch in a video game, the rules shift between seasons and people tune in to see how the new meta plays out. Which is also why this guide has a date on it." }
+    ]
+  },
+  "quiz": {
+    "kicker": "Test yourself",
+    "title": "Quiz: could you referee a Kings League match?",
+    "lead": "Five questions, all from the official 2025/26 rules.",
+    "progress": "Question {n} of {total}",
+    "scoreLabel": "Score",
+    "next": "Next question",
+    "finish": "See my score",
+    "retry": "Try again",
+    "correct": "Correct.",
+    "wrong": "Not quite.",
+    "resultTitle": "You got {score} out of {total}",
+    "results": [
+      "Back to the Scale-Up. Read the timeline again and have another go.",
+      "You know the basics. The cards are where it gets tricky.",
+      "Solid. You could commentate a match on Twitch.",
+      "Perfect score. You could referee this thing."
+    ],
+    "questions": [
+      {
+        "q": "How long is the first half?",
+        "options": ["20 minutes", "16 minutes", "25 minutes", "45 minutes"],
+        "answer": 0,
+        "explain": "The first half is 20 minutes and the second is 16, then Matchball Mode or shootouts."
+      },
+      {
+        "q": "Between which minutes do all goals count double?",
+        "options": ["0'–5'", "17'–20'", "20'–23'", "33'–36'"],
+        "answer": 1,
+        "explain": "From minute 17 to half-time a different-coloured ball comes on and every goal counts double."
+      },
+      {
+        "q": "The giant dice lands on the logo. What happens?",
+        "options": ["Both teams get a penalty", "3v3 plus keepers", "1v1 plus keepers", "Play continues 7v7"],
+        "answer": 2,
+        "explain": "Logo means 1v1 plus keepers. A 2 means 2v2 and a 3 means 3v3."
+      },
+      {
+        "q": "You play Reverse Penalty and your rival misses the kick. What happens?",
+        "options": ["Nothing, play restarts", "The penalty is retaken", "Your rival gets a goal", "Your team gets a goal"],
+        "answer": 3,
+        "explain": "With Reverse Penalty, a goal by the rival doesn't count, and a miss gives the goal to the team that played the card."
+      },
+      {
+        "q": "It's level at minute 36. What comes next?",
+        "options": ["Straight to shootouts", "Matchball Mode", "Ten minutes of extra time", "The draw stands"],
+        "answer": 0,
+        "explain": "A tie at 36 goes straight to shootouts. Matchball Mode only happens when one team is ahead."
+      }
+    ]
+  },
+  "watch": {
+    "kicker": "Where to watch",
+    "title": "How to watch",
+    "items": [
+      { "name": "Twitch", "text": "Free official streams, plus the presidents' own channels." },
+      { "name": "YouTube", "text": "Free live matches on the official channels." },
+      { "name": "TikTok", "text": "Free live streams and the clips that travel fastest." },
+      { "name": "DAZN", "text": "Holds 2026 rights: the Kings World Cup Nations worldwide (outside LATAM, Brazil, MENA, Israel and the US) and the spring leagues in Spain, Italy and Germany." }
+    ],
+    "verified": "Checked 18 November 2026. Broadcast deals change from season to season, so check the official site before a match."
+  },
+  "sources": {
+    "title": "Sources",
+    "lead": "Every figure in this article was checked against these sources on 18 November 2026.",
+    "items": [
+      { "label": "Kings League, How Kings is played (official rules)", "url": "https://kingsleague.pro/en/how-to-play" },
+      { "label": "Wikipedia, Kings League", "url": "https://en.wikipedia.org/wiki/Kings_League" },
+      { "label": "Wikipedia, Kings World Cup Clubs", "url": "https://en.wikipedia.org/wiki/Kings_World_Cup_Clubs" },
+      { "label": "Wikipedia, 2026 Kings World Cup Nations", "url": "https://en.wikipedia.org/wiki/2026_Kings_World_Cup_Nations" },
+      { "label": "Wikipedia, 2024 Kings World Cup", "url": "https://en.wikipedia.org/wiki/2024_Kings_World_Cup" },
+      { "label": "Kings League, Brazil champions of the Kings World Cup Nations 2025", "url": "https://kingsleague.pro/en/kwc-nations/news/brazil-champions-kings-world-cup-nations-2025" },
+      { "label": "Streams Charts, the new Kings League season", "url": "https://streamscharts.com/news/new-kings-league-season-announcement" },
+      { "label": "Streams Charts, Kings World Cup Clubs 2026", "url": "https://streamscharts.com/news/kings-world-cup-clubs-2026-viewership" },
+      { "label": "DAZN, Kings League rights for 2026", "url": "https://dazngroup.com/press-room/dazn-expands-global-football-portfolio-with-kings-leagues-most-dynamic-competitions-in-2026/" },
+      { "label": "ESPN, Kings League eyes a US launch", "url": "https://www.espn.co.uk/football/story/_/id/45512487/gerard-pique-kings-league-eyes-launch-us-2026" },
+      { "label": "FC Barcelona, Final Four at the Camp Nou", "url": "https://www.fcbarcelona.com/en/news/3029927/spotify-camp-nou-to-host-final-four-of-kings-league-infojobs-on-march-26" },
+      { "label": "Fox Sports (AP), fans pack the Camp Nou", "url": "https://foxsports.com/articles/soccer/fans-pack-camp-nou-to-watch-piques-kings-league" }
+    ]
+  },
+  "footer": {
+    "text": "Rules verified 18 November 2026. This is an independent explainer, not affiliated with Kings League.",
+    "credit": "Written by Johan Torres."
+  }
+}

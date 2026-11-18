@@ -1,0 +1,4 @@
+# Working files that should not be public on the deployed site
+*.md
+tools/
+.DS_Store

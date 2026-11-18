@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--HEAD:START-->
+  <title>Kings League, Explained: The Football League Built Like a Video Game</title>
+  <meta name="description" content="How Gerard Piqué's 7-a-side Kings League works: the Scale-Up, secret cards, the dice, Matchball Mode, the streamer presidents and why millions watch. Interactive guide.">
+  <meta property="og:title" content="Kings League, Explained">
+  <meta property="og:description" content="Secret cards, a giant dice and streamer presidents. An interactive guide to the football league built like a video game.">
+  <meta property="og:locale" content="en_GB">
+  <!--HEAD:END-->
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#050c18">
+  <meta name="author" content="Johan Torres">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500;600;700&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="modulepreload" href="render.js">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="ui.skip">Skip to article</a>
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-in">
+      <span class="site-name" data-i18n="ui.siteName">Kings League, Explained</span>
+      <nav class="lang-switch" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="true" aria-label="English">
+          <svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><clipPath id="uk-c"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="uk-t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#uk-c)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#uk-t)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+          <span class="lang-full">English</span><span class="lang-short" aria-hidden="true">EN</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="it" lang="it" aria-pressed="false" aria-label="Italiano">
+          <svg class="flag" viewBox="0 0 3 2" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#009246" d="M0 0h1v2H0z"/><path fill="#fff" d="M1 0h1v2H1z"/><path fill="#CE2B37" d="M2 0h1v2H2z"/></svg>
+          <span class="lang-full">Italiano</span><span class="lang-short" aria-hidden="true">IT</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="es" lang="es" aria-pressed="false" aria-label="Español">
+          <svg class="flag" viewBox="0 0 3 2" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#AA151B" d="M0 0h3v2H0z"/><path fill="#F1BF00" d="M0 .5h3v1H0z"/></svg>
+          <span class="lang-full">Español</span><span class="lang-short" aria-hidden="true">ES</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article id="app">
+      <!--APP:START-->
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap-wide hero-grid">
+      <div class="hero-copy">
+        <p class="pill-kicker">Explainer · Sport × Entertainment × Gaming</p>
+        <h1 id="hero-title">Kings League, Explained: The Football League Built Like a Video Game</h1>
+        <p class="hero-sub">Seven a side, 36 minutes, secret cards and a giant dice. How it works, and why millions tune in.</p>
+        <p class="byline"><span>By Johan Torres</span><span aria-hidden="true">·</span><span>7 min read</span><span aria-hidden="true">·</span><span class="byline-date">Rules verified 18 Nov 2026</span></p>
+      </div>
+      <div class="hero-art"><svg class="hero-pitch" viewBox="0 0 320 200" role="img" aria-label="Illustration of a seven-a-side pitch with seven players on each team">
+    <rect width="320" height="200" rx="14" fill="#081521"/>
+    
+  <rect x="4" y="4" width="312" height="192" rx="6" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <line x1="160" y1="4" x2="160" y2="196" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <circle cx="160" cy="100" r="32" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <rect x="4" y="60" width="32" height="80" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <rect x="284" y="60" width="32" height="80" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+    <rect x="14" y="94" width="12" height="12" rx="3" fill="#39FF14" stroke="#39FF14" stroke-width="2.5"/><rect x="294" y="94" width="12" height="12" rx="3" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle class="pl" style="--i:0" cx="60" cy="45" r="7" fill="#39FF14"/><circle class="pl" style="--i:1" cx="60" cy="100" r="7" fill="#39FF14"/><circle class="pl" style="--i:2" cx="60" cy="155" r="7" fill="#39FF14"/><circle class="pl" style="--i:3" cx="110" cy="70" r="7" fill="#39FF14"/><circle class="pl" style="--i:4" cx="110" cy="130" r="7" fill="#39FF14"/><circle class="pl" style="--i:5" cx="140" cy="100" r="7" fill="#39FF14"/>
+    <circle class="pl" style="--i:0" cx="260" cy="45" r="6" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/><circle class="pl" style="--i:1" cx="260" cy="100" r="6" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/><circle class="pl" style="--i:2" cx="260" cy="155" r="6" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/><circle class="pl" style="--i:3" cx="210" cy="70" r="6" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/><circle class="pl" style="--i:4" cx="210" cy="130" r="6" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/><circle class="pl" style="--i:5" cx="180" cy="100" r="6" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/>
+  </svg></div>
+    </div>
+  </section>
+
+  <section class="intro wrap prose reveal" aria-label="Intro">
+    <p class="dropcap">Picture a Tuesday night five-a-side game, then hand the rulebook to a room full of streamers. That's more or less the Kings League. Gerard Piqué, the former Barcelona and Spain defender, presented it on 10 November 2022: seven against seven, short halves, and rules that sound like they came out of a video game menu. Coaches hold secret cards. A giant dice decides how many players stay on the pitch. Team presidents can walk down from the stands and take a penalty.</p><p>It works because it lives where people already watch. Every match streams free on Twitch, YouTube and TikTok, and on the channels of presidents who bring their own millions of followers. In the first season in Spain, a single matchday-three game passed 1.3 million viewers. I'm Colombian and I come from five-a-side football (I'm building a booking platform for small-sided games in Bogotá), so I paid close attention when Colombia made the final of the Kings World Cup Nations in January 2025. We lost 6–2 to Brazil in Turin. Still, a final.</p>
+  </section>
+
+  <section class="numbers wrap reveal" aria-labelledby="numbers-title">
+    
+      <header class="sec-head">
+        <p class="kicker">By the numbers</p>
+        <h2 id="numbers-title">Kings League in numbers</h2>
+        
+      </header>
+    <ul class="stat-grid" role="list">
+      <li class="stat"><span class="stat-value">7v7</span><span class="stat-label">Players a side once the Scale-Up is done (it starts at 1v1)</span></li><li class="stat"><span class="stat-value">36'</span><span class="stat-label">Minutes of regulated time: a 20-minute half and a 16-minute half</span></li><li class="stat"><span class="stat-value">7</span><span class="stat-label">Secret cards in the 2025/26 deck</span></li><li class="stat"><span class="stat-value">1.3M+</span><span class="stat-label">Viewers for one game in season one (Spain, matchday 3)</span></li>
+    </ul>
+    <p class="fine">Rules as of the 2025/26 season. Audience figure from the 2023 season in Spain.</p>
+  </section>
+
+  <section class="timeline wrap-wide reveal" aria-labelledby="timeline-title">
+    
+      <header class="sec-head">
+        <p class="kicker">Minute by minute</p>
+        <h2 id="timeline-title">Anatomy of a match</h2>
+        <p class="lead">A Kings League game is a sequence of short phases, each with its own rule. Tap or hover a phase to see what happens.</p>
+      </header>
+    <div class="tl" data-timeline>
+      <p class="hint" aria-hidden="true">Tap a phase</p>
+      <div class="tl-bar" style="grid-template-columns:minmax(46px,5fr) minmax(46px,12fr) minmax(46px,3fr) minmax(46px,3fr) minmax(46px,13fr) minmax(46px,5fr)">
+        <button type="button" class="tl-seg tone-scale" data-seg="0" aria-pressed="true" aria-controls="tl-panel">
+            <span class="tl-range">0'–5'</span><span class="tl-short">Scale-Up</span></button><button type="button" class="tl-seg tone-cards" data-seg="1" aria-pressed="false" aria-controls="tl-panel">
+            <span class="tl-range">5'–17'</span><span class="tl-short">Cards</span></button><button type="button" class="tl-seg tone-double" data-seg="2" aria-pressed="false" aria-controls="tl-panel">
+            <span class="tl-range">17'–20'</span><span class="tl-short">x2</span></button><button type="button" class="tl-seg tone-dice" data-seg="3" aria-pressed="false" aria-controls="tl-panel">
+            <span class="tl-range">20'–23'</span><span class="tl-short">Dice</span></button><button type="button" class="tl-seg tone-cards" data-seg="4" aria-pressed="false" aria-controls="tl-panel">
+            <span class="tl-range">23'–36'</span><span class="tl-short">Cards</span></button><button type="button" class="tl-seg tone-end" data-seg="5" aria-pressed="false" aria-controls="tl-panel">
+            <span class="tl-range">36'+</span><span class="tl-short">End</span></button>
+      </div>
+      <div class="tl-ruler" aria-hidden="true" style="grid-template-columns:minmax(46px,5fr) minmax(46px,12fr) minmax(46px,3fr) minmax(46px,3fr) minmax(46px,13fr) minmax(46px,5fr)">
+        <span>0'</span><span>5'</span><span>17'</span><span>20'</span><span>23'</span><span>36'</span>
+      </div>
+      <div class="tl-panel" id="tl-panel" aria-live="polite">
+        <p class="tl-panel-range">0'–5'</p>
+        <h3>Scale-Up: from 1v1 to 7v7</h3>
+        <p>It starts 1v1 plus keepers: the ball drops from a cage and both players sprint for it. Every minute each side adds a player: 2v2, 3v3, and so on until it's 7v7 at minute 5.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards wrap-wide reveal" aria-labelledby="cards-title">
+    
+      <header class="sec-head">
+        <p class="kicker">The deck</p>
+        <h2 id="cards-title">The secret cards</h2>
+        <p class="lead">Before kick-off each coach draws one card at random. Nobody knows what the other bench is holding. Tap a card to flip it.</p>
+      </header>
+    <ul class="deck" role="list">
+      <li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Goal x2: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">01/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><text x="32" y="42" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-weight="700" font-size="26" fill="currentColor">x2</text></svg>
+              <span class="card-name">Goal x2</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">01/07</span></span>
+              <span class="card-name sm">Goal x2</span>
+              <span class="card-body">Every goal your team scores counts double for the next four minutes.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li><li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Suspension: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">02/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="34" r="18" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 22v12l8 5M26 10h12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><text x="32" y="62" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="9" font-weight="700" fill="currentColor">4:00</text></svg>
+              <span class="card-name">Suspension</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">02/07</span></span>
+              <span class="card-name sm">Suspension</span>
+              <span class="card-body">Pick a rival (any player except the keeper). They sit out for four minutes.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li><li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Star Player: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">03/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="m32 8 7 15 16 2-12 11 3 16-14-8-14 8 3-16L9 25l16-2Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+              <span class="card-name">Star Player</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">03/07</span></span>
+              <span class="card-name sm">Star Player</span>
+              <span class="card-body">Choose one player. Their first goal counts double. They wear an armband so everyone knows who it is.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li><li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Shootout: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">04/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="18" cy="40" r="9" fill="none" stroke="currentColor" stroke-width="3"/><path d="M30 34h22m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="40" y="20" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="11" font-weight="700" fill="currentColor">5s</text></svg>
+              <span class="card-name">Shootout</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">04/07</span></span>
+              <span class="card-name sm">Shootout</span>
+              <span class="card-body">Ball on the centre spot. One of your players gets five seconds to beat the keeper one on one.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li><li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Joker: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">05/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect x="14" y="10" width="24" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><rect x="26" y="20" width="24" height="34" rx="4" fill="#0B1A2A" stroke="currentColor" stroke-width="3"/><text x="38" y="43" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-size="16" font-weight="700" fill="currentColor">?</text></svg>
+              <span class="card-name">Joker</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">05/07</span></span>
+              <span class="card-name sm">Joker</span>
+              <span class="card-body">Play it as any of the other cards, or steal the card your rival is holding.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li><li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Reverse Penalty: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">06/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M48 26a17 17 0 0 0-30-8M16 38a17 17 0 0 0 30 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="m17 10 1 8 8-1M47 54l-1-8-8 1" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="card-name">Reverse Penalty</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">06/07</span></span>
+              <span class="card-name sm">Reverse Penalty</span>
+              <span class="card-body">Fans voted it in for 2025/26. You pick a rival to take a penalty. If they score, it doesn't count. If they miss, the goal is yours.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li><li>
+        <button type="button" class="flip-card" aria-pressed="false" aria-label="Penalty: Tap to flip">
+          <span class="flip-inner">
+            <span class="face front">
+              <span class="card-top"><span class="card-no">07/07</span><span class="card-label">Secret card</span></span>
+              <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M8 46V16h48v30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M8 26h48M8 36h48M20 16v30M32 16v30M44 16v30" stroke="currentColor" stroke-opacity=".3" stroke-width="1.5"/><circle cx="32" cy="54" r="5" fill="currentColor"/></svg>
+              <span class="card-name">Penalty</span>
+              <span class="card-hint" aria-hidden="true">Tap to flip ↻</span>
+            </span>
+            <span class="face back">
+              <span class="card-top"><span class="card-no">07/07</span></span>
+              <span class="card-name sm">Penalty</span>
+              <span class="card-body">A traditional penalty kick. The most normal thing in the deck.</span>
+              <span class="card-window">Play it 5'–17' or 23'–36'</span>
+            </span>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="dice wrap-wide reveal" aria-labelledby="dice-title">
+    
+      <header class="sec-head">
+        <p class="kicker">Minute 20</p>
+        <h2 id="dice-title">Roll the dice</h2>
+        <p class="lead">The second half starts with a giant dice. It has three faces, each printed twice: a logo, a 2 and a 3. Whatever lands decides how many outfield players each team keeps for three minutes.</p>
+      </header>
+    <div class="dice-box" data-dice>
+      <div class="dice-stage">
+        <div class="cube-scene" aria-hidden="true">
+          <div class="cube" data-cube>
+            <div class="cube-face f-front"><svg class="badge" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 3 42 13.5v21L24 45 6 34.5v-21Z" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-weight="700" font-size="20" fill="currentColor">7</text></svg></div><div class="cube-face f-right"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="10" fill="currentColor"/><circle cx="72" cy="72" r="10" fill="currentColor"/></svg></div><div class="cube-face f-top"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="26" cy="26" r="10" fill="currentColor"/><circle cx="50" cy="50" r="10" fill="currentColor"/><circle cx="74" cy="74" r="10" fill="currentColor"/></svg></div><div class="cube-face f-back"><svg class="badge" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 3 42 13.5v21L24 45 6 34.5v-21Z" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="Geist Mono, ui-monospace, monospace" font-weight="700" font-size="20" fill="currentColor">7</text></svg></div><div class="cube-face f-left"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="10" fill="currentColor"/><circle cx="72" cy="72" r="10" fill="currentColor"/></svg></div><div class="cube-face f-bottom"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="26" cy="26" r="10" fill="currentColor"/><circle cx="50" cy="50" r="10" fill="currentColor"/><circle cx="74" cy="74" r="10" fill="currentColor"/></svg></div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-neon" data-roll>Roll</button>
+        <p class="fine">Each result has the same chance: 2 in 6.</p>
+      </div>
+      <div class="dice-result" aria-live="polite" data-dice-result>
+        <p class="kicker">Result</p>
+        <p class="dice-big" data-dice-label>?</p>
+        <p class="dice-text" data-dice-text>Press Roll to start the second half.</p>
+        <div class="dice-pitch-wrap" data-dice-pitch><svg class="dice-pitch" viewBox="0 0 300 180" role="img" aria-label="Pitch diagram showing 0 outfield players per team plus goalkeepers">
+    <rect width="300" height="180" rx="12" fill="#081521"/>
+    
+  <rect x="4" y="4" width="292" height="172" rx="6" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <line x1="150" y1="4" x2="150" y2="176" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <circle cx="150" cy="90" r="28.8" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <rect x="4" y="54" width="30" height="72" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <rect x="266" y="54" width="30" height="72" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+    <rect x="12" y="84" width="12" height="12" rx="3" fill="#39FF14" stroke="#39FF14" stroke-width="2.5"/><rect x="276" y="84" width="12" height="12" rx="3" fill="#081521" stroke="#FFFFFF" stroke-width="2.5"/>
+    
+    
+  </svg></div>
+      </div>
+    </div>
+    <p class="fine">The logo on this dice is a generic badge made for this page, not the league's.</p>
+  </section>
+
+  <section class="compare wrap-wide reveal" aria-labelledby="compare-title">
+    
+      <header class="sec-head">
+        <p class="kicker">Side by side</p>
+        <h2 id="compare-title">Kings League vs traditional football</h2>
+        <p class="lead">Same ball, same goals. Almost everything else is different.</p>
+      </header>
+    <p class="hint scroll-hint" aria-hidden="true">Swipe the table sideways →</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-title">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col" class="col-kings">Kings League</th><th scope="col">Traditional football</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Players</th><td class="col-kings">7v7, after a Scale-Up from 1v1</td><td>11v11 from kick-off</td></tr><tr><th scope="row">Duration</th><td class="col-kings">20 + 16 minutes, then Matchball Mode or shootouts</td><td>45 + 45 minutes, plus stoppage time</td></tr><tr><th scope="row">Clock</th><td class="col-kings">Runs nonstop. Stops only for medical help, VAR, cards and time-wasting</td><td>Runs; the referee adds stoppage time</td></tr><tr><th scope="row">Substitutions</th><td class="col-kings">Unlimited</td><td>A fixed number per match</td></tr><tr><th scope="row">Cards</th><td class="col-kings">Yellow: 2 minutes out. Red: a player down for 5 minutes, then a replacement</td><td>Yellow is a warning. Red: off, and the team stays a player down</td></tr><tr><th scope="row">Draws</th><td class="col-kings">Never. Level at 36' means shootouts</td><td>Allowed in league games</td></tr><tr><th scope="row">Special rules</th><td class="col-kings">Secret cards, President Penalty, double goals, the dice, Matchball</td><td>None</td></tr><tr><th scope="row">Who's in charge</th><td class="col-kings">Team presidents (streamers and ex-pros); fans vote on new rules</td><td>Clubs and federations; IFAB writes the Laws of the Game</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="presidents wrap-wide reveal" aria-labelledby="presidents-title">
+    
+      <header class="sec-head">
+        <p class="kicker">The owners</p>
+        <h2 id="presidents-title">Who runs the teams</h2>
+        <p class="lead">Every team has a president, and most of them are famous for something other than football admin. That's the point: they bring the audience.</p>
+      </header>
+    <div class="pres-groups">
+      <div class="pres-group g0">
+        <h3>Streamers and creators</h3>
+        <ul role="list">
+          <li class="person"><span class="avatar" aria-hidden="true">IL</span><span class="person-text"><span class="person-name">Ibai Llanos</span><span class="person-team">Porcinos FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">TG</span><span class="person-text"><span class="person-name">TheGrefg</span><span class="person-team">Saiyans FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">GA</span><span class="person-text"><span class="person-name">Gaules</span><span class="person-team">G3X FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">KA</span><span class="person-text"><span class="person-name">Kameto</span><span class="person-team">Karasu</span></span></li><li class="person"><span class="avatar" aria-hidden="true">FE</span><span class="person-text"><span class="person-name">Fedez</span><span class="person-team">Boomers</span></span></li><li class="person"><span class="avatar" aria-hidden="true">JV</span><span class="person-text"><span class="person-name">Jon Vlogs</span><span class="person-team">Capim FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">AR</span><span class="person-text"><span class="person-name">Adin Ross</span><span class="person-team">Miami 7 (co-owner)</span></span></li>
+        </ul>
+      </div><div class="pres-group g1">
+        <h3>Ex-players and celebrities</h3>
+        <ul role="list">
+          <li class="person"><span class="avatar" aria-hidden="true">IC</span><span class="person-text"><span class="person-name">Iker Casillas</span><span class="person-team">1K FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">SA</span><span class="person-text"><span class="person-name">Sergio Agüero</span><span class="person-team">Kunisports</span></span></li><li class="person"><span class="avatar" aria-hidden="true">NE</span><span class="person-text"><span class="person-name">Neymar</span><span class="person-team">FURIA FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">JH</span><span class="person-text"><span class="person-name">Javier &quot;Chicharito&quot; Hernández</span><span class="person-team">Olimpo United</span></span></li><li class="person"><span class="avatar" aria-hidden="true">MA</span><span class="person-text"><span class="person-name">Maluma</span><span class="person-team">Medallo City</span></span></li><li class="person"><span class="avatar" aria-hidden="true">MG</span><span class="person-text"><span class="person-name">Mario Götze</span><span class="person-team">Vice Versa FC</span></span></li><li class="person"><span class="avatar" aria-hidden="true">RF</span><span class="person-text"><span class="person-name">Rio Ferdinand</span><span class="person-team">FIVE FC (World Cup 2024)</span></span></li><li class="person"><span class="avatar" aria-hidden="true">EH</span><span class="person-text"><span class="person-name">Eden Hazard</span><span class="person-team">Deptostra FC (World Cup 2024)</span></span></li><li class="person"><span class="avatar" aria-hidden="true">AS</span><span class="person-text"><span class="person-name">Andriy Shevchenko</span><span class="person-team">UA Steel (World Cup 2024)</span></span></li><li class="person"><span class="avatar" aria-hidden="true">JP</span><span class="person-text"><span class="person-name">Jake Paul</span><span class="person-team">Miami 7 (co-owner)</span></span></li>
+        </ul>
+      </div><div class="pres-group g2">
+        <h3>League presidents</h3>
+        <ul role="list">
+          <li class="person"><span class="avatar" aria-hidden="true">ZI</span><span class="person-text"><span class="person-name">Zlatan Ibrahimović</span><span class="person-team">Kings League Italy and the Kings World Cup</span></span></li><li class="person"><span class="avatar" aria-hidden="true">KK</span><span class="person-text"><span class="person-name">Kaká</span><span class="person-team">Kings League Brazil</span></span></li><li class="person"><span class="avatar" aria-hidden="true">BS</span><span class="person-text"><span class="person-name">Bastian Schweinsteiger</span><span class="person-team">Kings League Germany</span></span></li><li class="person"><span class="avatar" aria-hidden="true">RN</span><span class="person-text"><span class="person-name">Ronaldo Nazário</span><span class="person-team">Kings World Cup Nations 2026</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Presidents change between seasons. Names and teams checked November 2026.</p>
+  </section>
+
+  <section class="expansion wrap-wide reveal" aria-labelledby="expansion-title">
+    
+      <header class="sec-head">
+        <p class="kicker">2022 → 2026</p>
+        <h2 id="expansion-title">From Barcelona to the world</h2>
+        <p class="lead">In four years the format went from one league in Spain to seven regions and two World Cups. A US league was announced in June 2025; as of November 2026 it isn't on the official list yet.</p>
+      </header>
+    <ol class="years" role="list">
+      <li class="year">
+        <p class="year-label"><span class="year-dot" aria-hidden="true"></span>2022</p>
+        <ul role="list">
+          <li class="event"><span class="event-date">Nov</span><span>Piqué presents the Kings League in Spain.</span></li>
+        </ul>
+      </li><li class="year">
+        <p class="year-label"><span class="year-dot" aria-hidden="true"></span>2023</p>
+        <ul role="list">
+          <li class="event"><span class="event-date">Feb</span><span>The Queens League, the women's version, kicks off.</span></li><li class="event"><span class="event-date">Mar</span><span>Final Four at the Camp Nou in front of more than 92,000 fans.</span></li><li class="event"><span class="event-date">Jul</span><span>Kings League Américas is announced.</span></li>
+        </ul>
+      </li><li class="year">
+        <p class="year-label"><span class="year-dot" aria-hidden="true"></span>2024</p>
+        <ul role="list">
+          <li class="event"><span>Américas starts play in Mexico City.</span></li><li class="event"><span>First Kings World Cup Clubs, in Mexico: Porcinos FC beat G3X FC 5–3 in Monterrey.</span></li><li class="event"><span class="event-date">Nov</span><span>Italy: 12 clubs, based in Milan.</span></li>
+        </ul>
+      </li><li class="year">
+        <p class="year-label"><span class="year-dot" aria-hidden="true"></span>2025</p>
+        <ul role="list">
+          <li class="event hl"><span class="event-date">Jan</span><span>Kings World Cup Nations in Italy: Brazil beat Colombia 6–2 in the final.</span></li><li class="event"><span class="event-date">Mar</span><span>Brazil launches with 10 teams.</span></li><li class="event"><span class="event-date">Apr</span><span>France (Villepinte) and Germany (Cologne) kick off.</span></li><li class="event"><span>Kings World Cup Clubs in France: Los Troncos FC beat Porcinos FC 6–3.</span></li><li class="event"><span class="event-date">Oct</span><span>MENA starts in Saudi Arabia, part of Riyadh Season. Autumn Kings Cups replace the old splits.</span></li>
+        </ul>
+      </li><li class="year">
+        <p class="year-label"><span class="year-dot" aria-hidden="true"></span>2026</p>
+        <ul role="list">
+          <li class="event"><span class="event-date">Jan</span><span>Nations in Brazil, 20 teams: Brazil win again, Chile runner-up.</span></li><li class="event"><span class="event-date">Feb</span><span>The transfer market switches from a virtual budget to real money.</span></li><li class="event"><span class="event-date">Aug</span><span>Clubs in Italy: G3X FC beat Alpak FC 9–5 in Milan, the first Brazilian champions.</span></li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section class="quote wrap reveal" aria-label="Quote">
+    <figure>
+      <blockquote><p>The rulebook works like patch notes. Fans vote, presidents argue, and next season plays by the result.</p></blockquote>
+      <figcaption>Johan Torres</figcaption>
+    </figure>
+  </section>
+
+  <section class="why wrap prose reveal" aria-labelledby="why-title">
+    
+      <header class="sec-head">
+        <p class="kicker">The analysis</p>
+        <h2 id="why-title">Why it works</h2>
+        
+      </header>
+    <h3><span class="why-no">01</span>Built for clips</h3><p>A normal match asks for two hours of your attention. A Kings League game gives you a reason to look up every few minutes: the Scale-Up, a secret card, double goals, the dice, Matchball. Each one is a ready-made clip. That suits the way a lot of Gen Z follows sport, in short pieces on a phone, on TikTok and YouTube as much as on a TV. You can catch the last five minutes and still feel you saw the whole story.</p><h3><span class="why-no">02</span>Presidents are the distribution</h3><p>The presidents are the marketing. When Ibai or Gaules streams a match, the game lands on a channel whose audience was already there. The league doesn't have to build a fan base from zero in every country; it borrows one and turns it into a rivalry. It's also how the format travels. Italy, Brazil, France, Germany and MENA each got their own local creators and ex-players as presidents, not imports from Spain.</p><h3><span class="why-no">03</span>Fans hold the controller</h3><p>Then there's the vote. Fans have shaped the rules from the start, and the newest card, Reverse Penalty, won a public vote for 2025/26. That turns viewers into stakeholders. Like a patch in a video game, the rules shift between seasons and people tune in to see how the new meta plays out. Which is also why this guide has a date on it.</p>
+  </section>
+
+  <section class="quiz wrap reveal" aria-labelledby="quiz-title">
+    
+      <header class="sec-head">
+        <p class="kicker">Test yourself</p>
+        <h2 id="quiz-title">Quiz: could you referee a Kings League match?</h2>
+        <p class="lead">Five questions, all from the official 2025/26 rules.</p>
+      </header>
+    <div class="quiz-box" data-quiz>
+      <div class="quiz-top">
+        <p class="kicker">Question 1 of 5</p>
+        <p class="kicker">Score: <span class="neon">0</span>/5</p>
+      </div>
+      <div class="quiz-progress" aria-hidden="true"><span style="width:0%"></span></div>
+      <h3 class="quiz-q" tabindex="-1" data-focus>How long is the first half?</h3>
+      <div class="quiz-options">
+        <button type="button" class="quiz-opt" data-quiz-option="0"><span class="opt-key" aria-hidden="true">A</span><span>20 minutes</span></button><button type="button" class="quiz-opt" data-quiz-option="1"><span class="opt-key" aria-hidden="true">B</span><span>16 minutes</span></button><button type="button" class="quiz-opt" data-quiz-option="2"><span class="opt-key" aria-hidden="true">C</span><span>25 minutes</span></button><button type="button" class="quiz-opt" data-quiz-option="3"><span class="opt-key" aria-hidden="true">D</span><span>45 minutes</span></button>
+      </div>
+      <div class="quiz-feedback" aria-live="polite"></div></div>
+  </section>
+
+  <section class="watch wrap-wide reveal" aria-labelledby="watch-title">
+    
+      <header class="sec-head">
+        <p class="kicker">Where to watch</p>
+        <h2 id="watch-title">How to watch</h2>
+        
+      </header>
+    <ul class="watch-grid" role="list">
+      <li class="watch-item"><span class="watch-name">Twitch</span><span>Free official streams, plus the presidents' own channels.</span></li><li class="watch-item"><span class="watch-name">YouTube</span><span>Free live matches on the official channels.</span></li><li class="watch-item"><span class="watch-name">TikTok</span><span>Free live streams and the clips that travel fastest.</span></li><li class="watch-item"><span class="watch-name">DAZN</span><span>Holds 2026 rights: the Kings World Cup Nations worldwide (outside LATAM, Brazil, MENA, Israel and the US) and the spring leagues in Spain, Italy and Germany.</span></li>
+    </ul>
+    <p class="fine">Checked 18 November 2026. Broadcast deals change from season to season, so check the official site before a match.</p>
+  </section>
+
+  <section class="sources wrap reveal" aria-labelledby="sources-title">
+    <h2 id="sources-title">Sources</h2>
+    <p class="fine">Every figure in this article was checked against these sources on 18 November 2026.</p>
+    <ol>
+      <li><a href="https://kingsleague.pro/en/how-to-play" rel="noopener" target="_blank">Kings League, How Kings is played (official rules)</a></li><li><a href="https://en.wikipedia.org/wiki/Kings_League" rel="noopener" target="_blank">Wikipedia, Kings League</a></li><li><a href="https://en.wikipedia.org/wiki/Kings_World_Cup_Clubs" rel="noopener" target="_blank">Wikipedia, Kings World Cup Clubs</a></li><li><a href="https://en.wikipedia.org/wiki/2026_Kings_World_Cup_Nations" rel="noopener" target="_blank">Wikipedia, 2026 Kings World Cup Nations</a></li><li><a href="https://en.wikipedia.org/wiki/2024_Kings_World_Cup" rel="noopener" target="_blank">Wikipedia, 2024 Kings World Cup</a></li><li><a href="https://kingsleague.pro/en/kwc-nations/news/brazil-champions-kings-world-cup-nations-2025" rel="noopener" target="_blank">Kings League, Brazil champions of the Kings World Cup Nations 2025</a></li><li><a href="https://streamscharts.com/news/new-kings-league-season-announcement" rel="noopener" target="_blank">Streams Charts, the new Kings League season</a></li><li><a href="https://streamscharts.com/news/kings-world-cup-clubs-2026-viewership" rel="noopener" target="_blank">Streams Charts, Kings World Cup Clubs 2026</a></li><li><a href="https://dazngroup.com/press-room/dazn-expands-global-football-portfolio-with-kings-leagues-most-dynamic-competitions-in-2026/" rel="noopener" target="_blank">DAZN, Kings League rights for 2026</a></li><li><a href="https://www.espn.co.uk/football/story/_/id/45512487/gerard-pique-kings-league-eyes-launch-us-2026" rel="noopener" target="_blank">ESPN, Kings League eyes a US launch</a></li><li><a href="https://www.fcbarcelona.com/en/news/3029927/spotify-camp-nou-to-host-final-four-of-kings-league-infojobs-on-march-26" rel="noopener" target="_blank">FC Barcelona, Final Four at the Camp Nou</a></li><li><a href="https://foxsports.com/articles/soccer/fans-pack-camp-nou-to-watch-piques-kings-league" rel="noopener" target="_blank">Fox Sports (AP), fans pack the Camp Nou</a></li>
+    </ol>
+  </section>
+  <!--APP:END-->
+    </article>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <!--FOOTER:START-->
+    <p>Rules verified 18 November 2026. This is an independent explainer, not affiliated with Kings League.</p><p>Written by Johan Torres.</p>
+  <!--FOOTER:END-->
+  </footer>
+</body>
+</html>

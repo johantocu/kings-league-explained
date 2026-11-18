@@ -1,0 +1,7 @@
+# Personal working notes (kept local, not public)
+CONTEXTO.md
+PROMPT.md
+
+.DS_Store
+node_modules/
+.vercel
