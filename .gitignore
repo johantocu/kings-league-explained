@@ -5,3 +5,7 @@ PROMPT.md
 .DS_Store
 node_modules/
 .vercel
+
+# Duplicate copies of the design package
+kings-league/
+kings-league-paquete.zip

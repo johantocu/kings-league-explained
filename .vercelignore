@@ -2,3 +2,5 @@
 *.md
 tools/
 .DS_Store
+kings-league/
+*.zip

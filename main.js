@@ -1,4 +1,4 @@
-import { LANGS, renderApp, quizView, freshQuiz, dicePitch, footer, DICE_FACES } from './render.js';
+import { LANGS, renderApp, quizView, freshQuiz, dicePitch, footer, DICE_FACES, segBug, scoreBug } from './render.js';
 
 const root = document.documentElement;
 const app = document.getElementById('app');
@@ -42,7 +42,7 @@ function setMeta(c) {
     const v = el.dataset.i18n.split('.').reduce((o, k) => (o ? o[k] : undefined), c);
     if (typeof v === 'string') el.textContent = v;
   });
-  const nav = document.querySelector('.lang-switch');
+  const nav = document.querySelector('.kx-lang');
   if (nav) nav.setAttribute('aria-label', c.ui.langLabel);
   document.getElementById('site-footer').innerHTML = footer(c);
 }
@@ -94,12 +94,18 @@ function selectSegment(i) {
   if (!seg) return;
   app.querySelectorAll('[data-seg]').forEach((b) => b.setAttribute('aria-pressed', String(Number(b.dataset.seg) === i)));
   const panel = document.getElementById('tl-panel');
-  panel.innerHTML = '';
-  const r = document.createElement('p'); r.className = 'tl-panel-range'; r.textContent = seg.range;
-  const h = document.createElement('h3'); h.textContent = seg.title;
-  const p = document.createElement('p'); p.textContent = seg.body;
-  panel.append(r, h, p);
+  panel.querySelector('.tl-bug').innerHTML = segBug(content, i);
+  panel.querySelector('.tl-title').textContent = seg.title;
+  panel.querySelector('.tl-body').textContent = seg.body;
+  bump(panel);
   panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap');
+}
+
+// Score-bug number "jumps" when it changes (DS motion rule).
+function bump(scope) {
+  const el = scope.querySelector('[data-bump]');
+  if (!el || reduceMotion.matches) return;
+  el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump');
 }
 
 /* ---------- Dice ---------- */
@@ -113,7 +119,7 @@ function rollDice(btn) {
   rolling = true;
   const s = content.dice;
   const cube = app.querySelector('[data-cube]');
-  const label = app.querySelector('[data-dice-label]');
+  const bugBox = app.querySelector('[data-dice-bug]');
   const text = app.querySelector('[data-dice-text]');
   const pitch = app.querySelector('[data-dice-pitch]');
   const idx = Math.floor(Math.random() * 6);
@@ -125,20 +131,21 @@ function rollDice(btn) {
   cubeRot = { x: nx, y: ny };
   btn.disabled = true;
   btn.textContent = s.rolling;
-  label.textContent = '…';
+  bugBox.querySelector('[data-bump]').textContent = '…';
   cube.style.transform = `rotateX(${nx}deg) rotateY(${ny}deg)`;
   const done = () => {
     const face = DICE_FACES[idx];
     const f = s.faces[face];
     const n = face === 'logo' ? 1 : Number(face);
-    label.textContent = f.label;
+    bugBox.innerHTML = scoreBug({ home: content.ui.home, away: content.ui.away, mid: f.label, min: '20:00', label: `${s.resultLabel}: ${f.label}` });
+    bump(bugBox);
     text.textContent = f.text;
     pitch.innerHTML = dicePitch(n, s.pitchAlt);
     btn.disabled = false;
     btn.textContent = s.again;
     rolling = false;
   };
-  setTimeout(done, reduceMotion.matches ? 50 : 1250);
+  setTimeout(done, reduceMotion.matches ? 50 : 850);
 }
 
 /* ---------- Quiz ---------- */
@@ -146,6 +153,7 @@ function drawQuiz(focus = true) {
   const box = app.querySelector('[data-quiz]');
   box.innerHTML = quizView(content, quiz);
   if (focus) box.querySelector('[data-focus]')?.focus({ preventScroll: true });
+  bump(box);
 }
 
 /* ---------- Events (delegated, so they survive re-renders) ---------- */
@@ -158,7 +166,7 @@ document.addEventListener('click', (e) => {
 
   if (t.dataset.seg !== undefined) { selectSegment(Number(t.dataset.seg)); return; }
 
-  if (t.classList.contains('flip-card')) {
+  if (t.classList.contains('kx-card')) {
     t.setAttribute('aria-pressed', String(t.getAttribute('aria-pressed') !== 'true'));
     return;
   }

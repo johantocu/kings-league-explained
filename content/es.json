@@ -10,7 +10,19 @@
     "skip": "Ir al artículo",
     "langLabel": "Idioma",
     "siteName": "La Kings League, explicada",
-    "pitchAlt": "Ilustración de una cancha de fútbol 7 con siete jugadores por equipo"
+    "pitchAlt": "Ilustración de una cancha de fútbol 7 con siete jugadores por equipo",
+    "home": "Local",
+    "away": "Visita",
+    "ticker": [
+      "La Kings League, explicada",
+      "Cartas secretas",
+      "Scale-Up de 1 a 7",
+      "Goles dobles",
+      "Tira el dado",
+      "Matchball",
+      "Presidentes streamers",
+      "Reglas verificadas nov 2026"
+    ]
   },
   "hero": {
     "kicker": "Explicador · Deporte × Entretenimiento × Gaming",
@@ -18,7 +30,8 @@
     "subtitle": "Siete contra siete, 36 minutos, cartas secretas y un dado gigante. Cómo funciona y por qué la ven millones.",
     "byline": "Por Johan Torres",
     "readTime": "7 min de lectura",
-    "updated": "Reglas verificadas el 18 nov 2026"
+    "updated": "Reglas verificadas el 18 nov 2026",
+    "titleGold": "videojuego"
   },
   "intro": {
     "paragraphs": [
@@ -30,10 +43,22 @@
     "kicker": "En cifras",
     "title": "La Kings League en números",
     "items": [
-      { "value": "7v7", "label": "Jugadores por equipo después del Scale-Up (arranca 1 contra 1)" },
-      { "value": "36'", "label": "Minutos de tiempo reglamentario: un tiempo de 20 y otro de 16" },
-      { "value": "7", "label": "Cartas secretas en el mazo de la temporada 2025/26" },
-      { "value": "1,3M+", "label": "Espectadores de un solo partido en la primera temporada (España, jornada 3)" }
+      {
+        "value": "7v7",
+        "label": "Jugadores por equipo después del Scale-Up (arranca 1 contra 1)"
+      },
+      {
+        "value": "36'",
+        "label": "Minutos de tiempo reglamentario: un tiempo de 20 y otro de 16"
+      },
+      {
+        "value": "7",
+        "label": "Cartas secretas en el mazo de la temporada 2025/26"
+      },
+      {
+        "value": "1,3M+",
+        "label": "Espectadores de un solo partido en la primera temporada (España, jornada 3)"
+      }
     ],
     "note": "Reglas de la temporada 2025/26. La audiencia es de la temporada 2023 en España."
   },
@@ -43,12 +68,42 @@
     "lead": "Un partido de la Kings League es una serie de fases cortas, cada una con su propia regla. Toca o pasa el cursor por una fase para ver qué pasa.",
     "hint": "Toca una fase",
     "segments": [
-      { "range": "0'–5'", "short": "Scale-Up", "title": "Scale-Up: de 1 contra 1 a 7 contra 7", "body": "Arranca 1 contra 1 más los arqueros: el balón cae de una jaula y los dos jugadores corren a buscarlo. Cada minuto entra un jugador por equipo: 2 contra 2, 3 contra 3 y así hasta el 7 contra 7 en el minuto 5." },
-      { "range": "5'–17'", "short": "Cartas", "title": "Primera ventana de cartas", "body": "Los entrenadores pueden apretar el botón verde para usar su carta secreta. Si el presidente está en el estadio, puede apretar el azul para cobrar el Penal del Presidente." },
-      { "range": "17'–20'", "short": "x2", "title": "Goles dobles", "body": "Entra un balón de otro color y cada gol vale doble hasta el medio tiempo. No hay tiempo añadido, así que los últimos segundos antes del descanso son un caos." },
-      { "range": "20'–23'", "short": "Dado", "title": "Medio tiempo y dado", "body": "El segundo tiempo arranca con el lanzamiento de un dado gigante. Si sale el logo, 1 contra 1; si sale 2, 2 contra 2; si sale 3, 3 contra 3, siempre más los arqueros. En el minuto 23 vuelven todos." },
-      { "range": "23'–36'", "short": "Cartas", "title": "Segunda ventana de cartas", "body": "Vuelven las cartas secretas y el Penal del Presidente. Los equipos que guardaron la carta para un final apretado la usan aquí." },
-      { "range": "36'+", "short": "Final", "title": "Matchball o shootouts", "body": "¿Empate en el 36? Directo a los shootouts. ¿Alguien gana? Empieza el Matchball: si marca el que va ganando, se acabó. Si empata el que pierde, el siguiente gol gana. Mientras tanto hay Scale-Down: de 5 contra 5, sale un jugador por equipo cada minuto hasta llegar a 1 contra 1." }
+      {
+        "range": "0'–5'",
+        "short": "Scale-Up",
+        "title": "Scale-Up: de 1 contra 1 a 7 contra 7",
+        "body": "Arranca 1 contra 1 más los arqueros: el balón cae de una jaula y los dos jugadores corren a buscarlo. Cada minuto entra un jugador por equipo: 2 contra 2, 3 contra 3 y así hasta el 7 contra 7 en el minuto 5."
+      },
+      {
+        "range": "5'–17'",
+        "short": "Cartas",
+        "title": "Primera ventana de cartas",
+        "body": "Los entrenadores pueden apretar el botón verde para usar su carta secreta. Si el presidente está en el estadio, puede apretar el azul para cobrar el Penal del Presidente."
+      },
+      {
+        "range": "17'–20'",
+        "short": "x2",
+        "title": "Goles dobles",
+        "body": "Entra un balón de otro color y cada gol vale doble hasta el medio tiempo. No hay tiempo añadido, así que los últimos segundos antes del descanso son un caos."
+      },
+      {
+        "range": "20'–23'",
+        "short": "Dado",
+        "title": "Medio tiempo y dado",
+        "body": "El segundo tiempo arranca con el lanzamiento de un dado gigante. Si sale el logo, 1 contra 1; si sale 2, 2 contra 2; si sale 3, 3 contra 3, siempre más los arqueros. En el minuto 23 vuelven todos."
+      },
+      {
+        "range": "23'–36'",
+        "short": "Cartas",
+        "title": "Segunda ventana de cartas",
+        "body": "Vuelven las cartas secretas y el Penal del Presidente. Los equipos que guardaron la carta para un final apretado la usan aquí."
+      },
+      {
+        "range": "36'+",
+        "short": "Final",
+        "title": "Matchball o shootouts",
+        "body": "¿Empate en el 36? Directo a los shootouts. ¿Alguien gana? Empieza el Matchball: si marca el que va ganando, se acabó. Si empata el que pierde, el siguiente gol gana. Mientras tanto hay Scale-Down: de 5 contra 5, sale un jugador por equipo cada minuto hasta llegar a 1 contra 1."
+      }
     ]
   },
   "cards": {
@@ -59,14 +114,43 @@
     "label": "Carta secreta",
     "window": "Se usa entre el 5' y el 17' o entre el 23' y el 36'",
     "items": [
-      { "id": "x2", "name": "Goal x2", "body": "Cada gol de tu equipo vale doble durante los siguientes cuatro minutos." },
-      { "id": "suspension", "name": "Suspension", "body": "Eliges a un rival (cualquiera menos el arquero). Queda fuera cuatro minutos." },
-      { "id": "star", "name": "Star Player", "body": "Eliges a un jugador. Su primer gol vale doble. Lleva un brazalete para que todos sepan quién es." },
-      { "id": "shootout", "name": "Shootout", "body": "Balón en el centro de la cancha. Uno de tus jugadores tiene cinco segundos para ganarle al arquero mano a mano." },
-      { "id": "joker", "name": "Joker", "body": "La usas como cualquiera de las otras cartas, o le robas la carta al rival." },
-      { "id": "reverse", "name": "Reverse Penalty", "body": "La eligieron los fans para la 2025/26. Escoges a un rival para que cobre un penal. Si lo mete, no cuenta. Si lo falla, el gol es tuyo." },
-      { "id": "penalty", "name": "Penalty", "body": "Un penal de toda la vida. Lo más normal del mazo." }
-    ]
+      {
+        "id": "x2",
+        "name": "Goal x2",
+        "body": "Cada gol de tu equipo vale doble durante los siguientes cuatro minutos."
+      },
+      {
+        "id": "suspension",
+        "name": "Suspension",
+        "body": "Eliges a un rival (cualquiera menos el arquero). Queda fuera cuatro minutos."
+      },
+      {
+        "id": "star",
+        "name": "Star Player",
+        "body": "Eliges a un jugador. Su primer gol vale doble. Lleva un brazalete para que todos sepan quién es."
+      },
+      {
+        "id": "shootout",
+        "name": "Shootout",
+        "body": "Balón en el centro de la cancha. Uno de tus jugadores tiene cinco segundos para ganarle al arquero mano a mano."
+      },
+      {
+        "id": "joker",
+        "name": "Joker",
+        "body": "La usas como cualquiera de las otras cartas, o le robas la carta al rival."
+      },
+      {
+        "id": "reverse",
+        "name": "Reverse Penalty",
+        "body": "La eligieron los fans para la 2025/26. Escoges a un rival para que cobre un penal. Si lo mete, no cuenta. Si lo falla, el gol es tuyo."
+      },
+      {
+        "id": "penalty",
+        "name": "Penalty",
+        "body": "Un penal de toda la vida. Lo más normal del mazo."
+      }
+    ],
+    "aria": "Carta {name}, toca para voltearla"
   },
   "dice": {
     "kicker": "Minuto 20",
@@ -78,9 +162,18 @@
     "prompt": "Aprieta Tirar para empezar el segundo tiempo.",
     "resultLabel": "Resultado",
     "faces": {
-      "logo": { "label": "1v1", "text": "Logo: un jugador de campo por equipo, más los arqueros. Espacio de sobra." },
-      "2": { "label": "2v2", "text": "Dos por equipo, más los arqueros. Fútbol de pared." },
-      "3": { "label": "3v3", "text": "Tres por equipo, más los arqueros. Lo más parecido a un partido de barrio." }
+      "logo": {
+        "label": "1v1",
+        "text": "Logo: un jugador de campo por equipo, más los arqueros. Espacio de sobra."
+      },
+      "2": {
+        "label": "2v2",
+        "text": "Dos por equipo, más los arqueros. Fútbol de pared."
+      },
+      "3": {
+        "label": "3v3",
+        "text": "Tres por equipo, más los arqueros. Lo más parecido a un partido de barrio."
+      }
     },
     "odds": "Cada resultado tiene la misma probabilidad: 2 de 6.",
     "logoNote": "El logo de este dado es un escudo genérico hecho para esta página, no el de la liga.",
@@ -91,16 +184,52 @@
     "title": "Kings League vs. fútbol tradicional",
     "lead": "Mismo balón, mismos arcos. Casi todo lo demás cambia.",
     "scrollHint": "Desliza la tabla hacia los lados",
-    "headers": ["", "Kings League", "Fútbol tradicional"],
+    "headers": [
+      "",
+      "Kings League",
+      "Fútbol tradicional"
+    ],
     "rows": [
-      ["Jugadores", "7 contra 7, después de un Scale-Up desde 1 contra 1", "11 contra 11 desde el inicio"],
-      ["Duración", "20 + 16 minutos, luego Matchball o shootouts", "45 + 45 minutos, más el tiempo añadido"],
-      ["Reloj", "Corre sin parar. Solo se detiene por asistencia médica, VAR, cartas y pérdida de tiempo", "Corre; el árbitro añade tiempo"],
-      ["Cambios", "Ilimitados", "Un número fijo por partido"],
-      ["Tarjetas", "Amarilla: 2 minutos fuera. Roja: un jugador menos durante 5 minutos y luego entra un reemplazo", "La amarilla es una advertencia. Roja: expulsado y el equipo sigue con uno menos"],
-      ["Empates", "Nunca. Empate en el 36' significa shootouts", "Se permiten en los partidos de liga"],
-      ["Reglas especiales", "Cartas secretas, Penal del Presidente, goles dobles, el dado, Matchball", "Ninguna"],
-      ["Quién manda", "Los presidentes de los equipos (streamers y exjugadores); los fans votan reglas nuevas", "Clubes y federaciones; la IFAB escribe las Reglas de Juego"]
+      [
+        "Jugadores",
+        "7 contra 7, después de un Scale-Up desde 1 contra 1",
+        "11 contra 11 desde el inicio"
+      ],
+      [
+        "Duración",
+        "20 + 16 minutos, luego Matchball o shootouts",
+        "45 + 45 minutos, más el tiempo añadido"
+      ],
+      [
+        "Reloj",
+        "Corre sin parar. Solo se detiene por asistencia médica, VAR, cartas y pérdida de tiempo",
+        "Corre; el árbitro añade tiempo"
+      ],
+      [
+        "Cambios",
+        "Ilimitados",
+        "Un número fijo por partido"
+      ],
+      [
+        "Tarjetas",
+        "Amarilla: 2 minutos fuera. Roja: un jugador menos durante 5 minutos y luego entra un reemplazo",
+        "La amarilla es una advertencia. Roja: expulsado y el equipo sigue con uno menos"
+      ],
+      [
+        "Empates",
+        "Nunca. Empate en el 36' significa shootouts",
+        "Se permiten en los partidos de liga"
+      ],
+      [
+        "Reglas especiales",
+        "Cartas secretas, Penal del Presidente, goles dobles, el dado, Matchball",
+        "Ninguna"
+      ],
+      [
+        "Quién manda",
+        "Los presidentes de los equipos (streamers y exjugadores); los fans votan reglas nuevas",
+        "Clubes y federaciones; la IFAB escribe las Reglas de Juego"
+      ]
     ]
   },
   "presidents": {
@@ -111,37 +240,121 @@
       {
         "title": "Streamers y creadores",
         "people": [
-          { "name": "Ibai Llanos", "initials": "IL", "team": "Porcinos FC" },
-          { "name": "TheGrefg", "initials": "TG", "team": "Saiyans FC" },
-          { "name": "Gaules", "initials": "GA", "team": "G3X FC" },
-          { "name": "Kameto", "initials": "KA", "team": "Karasu" },
-          { "name": "Fedez", "initials": "FE", "team": "Boomers" },
-          { "name": "Jon Vlogs", "initials": "JV", "team": "Capim FC" },
-          { "name": "Adin Ross", "initials": "AR", "team": "Miami 7 (copropietario)" }
+          {
+            "name": "Ibai Llanos",
+            "initials": "IL",
+            "team": "Porcinos FC"
+          },
+          {
+            "name": "TheGrefg",
+            "initials": "TG",
+            "team": "Saiyans FC"
+          },
+          {
+            "name": "Gaules",
+            "initials": "GA",
+            "team": "G3X FC"
+          },
+          {
+            "name": "Kameto",
+            "initials": "KA",
+            "team": "Karasu"
+          },
+          {
+            "name": "Fedez",
+            "initials": "FE",
+            "team": "Boomers"
+          },
+          {
+            "name": "Jon Vlogs",
+            "initials": "JV",
+            "team": "Capim FC"
+          },
+          {
+            "name": "Adin Ross",
+            "initials": "AR",
+            "team": "Miami 7 (copropietario)"
+          }
         ]
       },
       {
         "title": "Exjugadores y famosos",
         "people": [
-          { "name": "Iker Casillas", "initials": "IC", "team": "1K FC" },
-          { "name": "Sergio Agüero", "initials": "SA", "team": "Kunisports" },
-          { "name": "Neymar", "initials": "NE", "team": "FURIA FC" },
-          { "name": "Javier \"Chicharito\" Hernández", "initials": "JH", "team": "Olimpo United" },
-          { "name": "Maluma", "initials": "MA", "team": "Medallo City" },
-          { "name": "Mario Götze", "initials": "MG", "team": "Vice Versa FC" },
-          { "name": "Rio Ferdinand", "initials": "RF", "team": "FIVE FC (Mundial 2024)" },
-          { "name": "Eden Hazard", "initials": "EH", "team": "Deptostra FC (Mundial 2024)" },
-          { "name": "Andriy Shevchenko", "initials": "AS", "team": "UA Steel (Mundial 2024)" },
-          { "name": "Jake Paul", "initials": "JP", "team": "Miami 7 (copropietario)" }
+          {
+            "name": "Iker Casillas",
+            "initials": "IC",
+            "team": "1K FC"
+          },
+          {
+            "name": "Sergio Agüero",
+            "initials": "SA",
+            "team": "Kunisports"
+          },
+          {
+            "name": "Neymar",
+            "initials": "NE",
+            "team": "FURIA FC"
+          },
+          {
+            "name": "Javier \"Chicharito\" Hernández",
+            "initials": "JH",
+            "team": "Olimpo United"
+          },
+          {
+            "name": "Maluma",
+            "initials": "MA",
+            "team": "Medallo City"
+          },
+          {
+            "name": "Mario Götze",
+            "initials": "MG",
+            "team": "Vice Versa FC"
+          },
+          {
+            "name": "Rio Ferdinand",
+            "initials": "RF",
+            "team": "FIVE FC (Mundial 2024)"
+          },
+          {
+            "name": "Eden Hazard",
+            "initials": "EH",
+            "team": "Deptostra FC (Mundial 2024)"
+          },
+          {
+            "name": "Andriy Shevchenko",
+            "initials": "AS",
+            "team": "UA Steel (Mundial 2024)"
+          },
+          {
+            "name": "Jake Paul",
+            "initials": "JP",
+            "team": "Miami 7 (copropietario)"
+          }
         ]
       },
       {
         "title": "Presidentes de liga",
         "people": [
-          { "name": "Zlatan Ibrahimović", "initials": "ZI", "team": "Kings League Italia y la Kings World Cup" },
-          { "name": "Kaká", "initials": "KK", "team": "Kings League Brasil" },
-          { "name": "Bastian Schweinsteiger", "initials": "BS", "team": "Kings League Alemania" },
-          { "name": "Ronaldo Nazário", "initials": "RN", "team": "Kings World Cup Nations 2026" }
+          {
+            "name": "Zlatan Ibrahimović",
+            "initials": "ZI",
+            "team": "Kings League Italia y la Kings World Cup"
+          },
+          {
+            "name": "Kaká",
+            "initials": "KK",
+            "team": "Kings League Brasil"
+          },
+          {
+            "name": "Bastian Schweinsteiger",
+            "initials": "BS",
+            "team": "Kings League Alemania"
+          },
+          {
+            "name": "Ronaldo Nazário",
+            "initials": "RN",
+            "team": "Kings World Cup Nations 2026"
+          }
         ]
       }
     ],
@@ -155,41 +368,87 @@
       {
         "year": "2022",
         "events": [
-          { "date": "Nov", "text": "Piqué presenta la Kings League en España." }
+          {
+            "date": "Nov",
+            "text": "Piqué presenta la Kings League en España."
+          }
         ]
       },
       {
         "year": "2023",
         "events": [
-          { "date": "Feb", "text": "Arranca la Queens League, la versión femenina." },
-          { "date": "Mar", "text": "Final Four en el Camp Nou ante más de 92.000 personas." },
-          { "date": "Jul", "text": "Se anuncia la Kings League Américas." }
+          {
+            "date": "Feb",
+            "text": "Arranca la Queens League, la versión femenina."
+          },
+          {
+            "date": "Mar",
+            "text": "Final Four en el Camp Nou ante más de 92.000 personas."
+          },
+          {
+            "date": "Jul",
+            "text": "Se anuncia la Kings League Américas."
+          }
         ]
       },
       {
         "year": "2024",
         "events": [
-          { "date": "", "text": "Américas empieza a jugar en Ciudad de México." },
-          { "date": "", "text": "Primera Kings World Cup Clubs, en México: Porcinos FC le gana 5–3 a G3X FC en Monterrey." },
-          { "date": "Nov", "text": "Italia: 12 clubes, con sede en Milán." }
+          {
+            "date": "",
+            "text": "Américas empieza a jugar en Ciudad de México."
+          },
+          {
+            "date": "",
+            "text": "Primera Kings World Cup Clubs, en México: Porcinos FC le gana 5–3 a G3X FC en Monterrey."
+          },
+          {
+            "date": "Nov",
+            "text": "Italia: 12 clubes, con sede en Milán."
+          }
         ]
       },
       {
         "year": "2025",
         "events": [
-          { "date": "Ene", "text": "Kings World Cup Nations en Italia: Brasil le gana 6–2 a Colombia en la final.", "highlight": true },
-          { "date": "Mar", "text": "Arranca Brasil con 10 equipos." },
-          { "date": "Abr", "text": "Arrancan Francia (Villepinte) y Alemania (Colonia)." },
-          { "date": "", "text": "Kings World Cup Clubs en Francia: Los Troncos FC le gana 6–3 a Porcinos FC." },
-          { "date": "Oct", "text": "Empieza MENA en Arabia Saudita, dentro de la Riyadh Season. Las Kings Cups de otoño reemplazan a los splits." }
+          {
+            "date": "Ene",
+            "text": "Kings World Cup Nations en Italia: Brasil le gana 6–2 a Colombia en la final.",
+            "highlight": true
+          },
+          {
+            "date": "Mar",
+            "text": "Arranca Brasil con 10 equipos."
+          },
+          {
+            "date": "Abr",
+            "text": "Arrancan Francia (Villepinte) y Alemania (Colonia)."
+          },
+          {
+            "date": "",
+            "text": "Kings World Cup Clubs en Francia: Los Troncos FC le gana 6–3 a Porcinos FC."
+          },
+          {
+            "date": "Oct",
+            "text": "Empieza MENA en Arabia Saudita, dentro de la Riyadh Season. Las Kings Cups de otoño reemplazan a los splits."
+          }
         ]
       },
       {
         "year": "2026",
         "events": [
-          { "date": "Ene", "text": "Nations en Brasil, 20 selecciones: Brasil gana otra vez y Chile es subcampeón." },
-          { "date": "Feb", "text": "El mercado de fichajes pasa del presupuesto virtual al dinero real." },
-          { "date": "Ago", "text": "Clubs en Italia: G3X FC le gana 9–5 a Alpak FC en Milán, primer campeón brasileño." }
+          {
+            "date": "Ene",
+            "text": "Nations en Brasil, 20 selecciones: Brasil gana otra vez y Chile es subcampeón."
+          },
+          {
+            "date": "Feb",
+            "text": "El mercado de fichajes pasa del presupuesto virtual al dinero real."
+          },
+          {
+            "date": "Ago",
+            "text": "Clubs en Italia: G3X FC le gana 9–5 a Alpak FC en Milán, primer campeón brasileño."
+          }
         ]
       }
     ]
@@ -202,9 +461,18 @@
     "kicker": "El análisis",
     "title": "Por qué funciona",
     "paragraphs": [
-      { "heading": "Hecha para clips", "text": "Un partido normal te pide dos horas de atención. Uno de la Kings League te da un motivo para levantar la vista cada pocos minutos: el Scale-Up, una carta secreta, los goles dobles, el dado, el Matchball. Cada momento es un clip listo. Eso encaja con la forma en que buena parte de la generación Z sigue el deporte, en pedazos cortos y desde el celular, tanto en TikTok y YouTube como en la tele. Puedes ver los últimos cinco minutos y sentir que viste toda la historia." },
-      { "heading": "Los presidentes son la distribución", "text": "Los presidentes son el marketing. Cuando Ibai o Gaules transmiten un partido, el juego cae en un canal cuya audiencia ya estaba ahí. La liga no tiene que construir una afición desde cero en cada país: la toma prestada y la convierte en rivalidad. Así es también como viaja el formato. Italia, Brasil, Francia, Alemania y MENA tienen sus propios creadores y exjugadores locales como presidentes, no importados de España." },
-      { "heading": "Los fans tienen el control", "text": "Y después está la votación. Los fans han moldeado las reglas desde el principio, y la carta más nueva, Reverse Penalty, ganó una votación pública para la 2025/26. Eso convierte a los espectadores en parte del proyecto. Como un parche en un videojuego, las reglas cambian entre temporadas y la gente se conecta para ver cómo queda el nuevo meta. Por eso esta guía tiene fecha." }
+      {
+        "heading": "Hecha para clips",
+        "text": "Un partido normal te pide dos horas de atención. Uno de la Kings League te da un motivo para levantar la vista cada pocos minutos: el Scale-Up, una carta secreta, los goles dobles, el dado, el Matchball. Cada momento es un clip listo. Eso encaja con la forma en que buena parte de la generación Z sigue el deporte, en pedazos cortos y desde el celular, tanto en TikTok y YouTube como en la tele. Puedes ver los últimos cinco minutos y sentir que viste toda la historia."
+      },
+      {
+        "heading": "Los presidentes son la distribución",
+        "text": "Los presidentes son el marketing. Cuando Ibai o Gaules transmiten un partido, el juego cae en un canal cuya audiencia ya estaba ahí. La liga no tiene que construir una afición desde cero en cada país: la toma prestada y la convierte en rivalidad. Así es también como viaja el formato. Italia, Brasil, Francia, Alemania y MENA tienen sus propios creadores y exjugadores locales como presidentes, no importados de España."
+      },
+      {
+        "heading": "Los fans tienen el control",
+        "text": "Y después está la votación. Los fans han moldeado las reglas desde el principio, y la carta más nueva, Reverse Penalty, ganó una votación pública para la 2025/26. Eso convierte a los espectadores en parte del proyecto. Como un parche en un videojuego, las reglas cambian entre temporadas y la gente se conecta para ver cómo queda el nuevo meta. Por eso esta guía tiene fecha."
+      }
     ]
   },
   "quiz": {
@@ -228,31 +496,56 @@
     "questions": [
       {
         "q": "¿Cuánto dura el primer tiempo?",
-        "options": ["20 minutos", "16 minutos", "25 minutos", "45 minutos"],
+        "options": [
+          "20 minutos",
+          "16 minutos",
+          "25 minutos",
+          "45 minutos"
+        ],
         "answer": 0,
         "explain": "El primer tiempo dura 20 minutos y el segundo 16; después viene el Matchball o los shootouts."
       },
       {
         "q": "¿Entre qué minutos valen doble todos los goles?",
-        "options": ["0'–5'", "17'–20'", "20'–23'", "33'–36'"],
+        "options": [
+          "0'–5'",
+          "17'–20'",
+          "20'–23'",
+          "33'–36'"
+        ],
         "answer": 1,
         "explain": "Del minuto 17 al medio tiempo entra un balón de otro color y cada gol vale doble."
       },
       {
         "q": "El dado gigante cae en el logo. ¿Qué pasa?",
-        "options": ["Penal para los dos equipos", "3 contra 3 más los arqueros", "1 contra 1 más los arqueros", "Se sigue 7 contra 7"],
+        "options": [
+          "Penal para los dos equipos",
+          "3 contra 3 más los arqueros",
+          "1 contra 1 más los arqueros",
+          "Se sigue 7 contra 7"
+        ],
         "answer": 2,
         "explain": "El logo significa 1 contra 1 más los arqueros. El 2 es 2 contra 2 y el 3 es 3 contra 3."
       },
       {
         "q": "Usas Reverse Penalty y tu rival falla el penal. ¿Qué pasa?",
-        "options": ["Nada, se reanuda el juego", "Se repite el penal", "El rival gana un gol", "Tu equipo gana un gol"],
+        "options": [
+          "Nada, se reanuda el juego",
+          "Se repite el penal",
+          "El rival gana un gol",
+          "Tu equipo gana un gol"
+        ],
         "answer": 3,
         "explain": "Con Reverse Penalty, si el rival lo mete no cuenta, y si lo falla el gol es para el equipo que usó la carta."
       },
       {
         "q": "Van empatados en el minuto 36. ¿Qué sigue?",
-        "options": ["Directo a los shootouts", "El Matchball", "Diez minutos de alargue", "Queda empate"],
+        "options": [
+          "Directo a los shootouts",
+          "El Matchball",
+          "Diez minutos de alargue",
+          "Queda empate"
+        ],
         "answer": 0,
         "explain": "Un empate en el 36 va directo a los shootouts. El Matchball solo se juega cuando un equipo va ganando."
       }
@@ -262,10 +555,22 @@
     "kicker": "Dónde verla",
     "title": "Cómo verla",
     "items": [
-      { "name": "Twitch", "text": "Transmisiones oficiales gratis, más los canales de los propios presidentes." },
-      { "name": "YouTube", "text": "Partidos en vivo y gratis en los canales oficiales." },
-      { "name": "TikTok", "text": "Transmisiones en vivo gratis y los clips que más se mueven." },
-      { "name": "DAZN", "text": "Tiene derechos para 2026: la Kings World Cup Nations a nivel mundial (salvo Latinoamérica, Brasil, MENA, Israel y Estados Unidos) y las ligas de primavera de España, Italia y Alemania." }
+      {
+        "name": "Twitch",
+        "text": "Transmisiones oficiales gratis, más los canales de los propios presidentes."
+      },
+      {
+        "name": "YouTube",
+        "text": "Partidos en vivo y gratis en los canales oficiales."
+      },
+      {
+        "name": "TikTok",
+        "text": "Transmisiones en vivo gratis y los clips que más se mueven."
+      },
+      {
+        "name": "DAZN",
+        "text": "Tiene derechos para 2026: la Kings World Cup Nations a nivel mundial (salvo Latinoamérica, Brasil, MENA, Israel y Estados Unidos) y las ligas de primavera de España, Italia y Alemania."
+      }
     ],
     "verified": "Verificado el 18 de noviembre de 2026. Los derechos de transmisión cambian de temporada a temporada, así que revisa el sitio oficial antes de un partido."
   },
@@ -273,18 +578,54 @@
     "title": "Fuentes",
     "lead": "Cada dato de este artículo se verificó con estas fuentes el 18 de noviembre de 2026.",
     "items": [
-      { "label": "Kings League, How Kings is played (reglas oficiales)", "url": "https://kingsleague.pro/en/how-to-play" },
-      { "label": "Wikipedia, Kings League", "url": "https://en.wikipedia.org/wiki/Kings_League" },
-      { "label": "Wikipedia, Kings World Cup Clubs", "url": "https://en.wikipedia.org/wiki/Kings_World_Cup_Clubs" },
-      { "label": "Wikipedia, 2026 Kings World Cup Nations", "url": "https://en.wikipedia.org/wiki/2026_Kings_World_Cup_Nations" },
-      { "label": "Wikipedia, 2024 Kings World Cup", "url": "https://en.wikipedia.org/wiki/2024_Kings_World_Cup" },
-      { "label": "Kings League, Brasil campeón de la Kings World Cup Nations 2025", "url": "https://kingsleague.pro/en/kwc-nations/news/brazil-champions-kings-world-cup-nations-2025" },
-      { "label": "Streams Charts, la nueva temporada de la Kings League", "url": "https://streamscharts.com/news/new-kings-league-season-announcement" },
-      { "label": "Streams Charts, Kings World Cup Clubs 2026", "url": "https://streamscharts.com/news/kings-world-cup-clubs-2026-viewership" },
-      { "label": "DAZN, derechos de la Kings League para 2026", "url": "https://dazngroup.com/press-room/dazn-expands-global-football-portfolio-with-kings-leagues-most-dynamic-competitions-in-2026/" },
-      { "label": "ESPN, el plan de la Kings League para Estados Unidos", "url": "https://www.espn.co.uk/football/story/_/id/45512487/gerard-pique-kings-league-eyes-launch-us-2026" },
-      { "label": "FC Barcelona, la Final Four en el Camp Nou", "url": "https://www.fcbarcelona.com/en/news/3029927/spotify-camp-nou-to-host-final-four-of-kings-league-infojobs-on-march-26" },
-      { "label": "Fox Sports (AP), el Camp Nou lleno", "url": "https://foxsports.com/articles/soccer/fans-pack-camp-nou-to-watch-piques-kings-league" }
+      {
+        "label": "Kings League, How Kings is played (reglas oficiales)",
+        "url": "https://kingsleague.pro/en/how-to-play"
+      },
+      {
+        "label": "Wikipedia, Kings League",
+        "url": "https://en.wikipedia.org/wiki/Kings_League"
+      },
+      {
+        "label": "Wikipedia, Kings World Cup Clubs",
+        "url": "https://en.wikipedia.org/wiki/Kings_World_Cup_Clubs"
+      },
+      {
+        "label": "Wikipedia, 2026 Kings World Cup Nations",
+        "url": "https://en.wikipedia.org/wiki/2026_Kings_World_Cup_Nations"
+      },
+      {
+        "label": "Wikipedia, 2024 Kings World Cup",
+        "url": "https://en.wikipedia.org/wiki/2024_Kings_World_Cup"
+      },
+      {
+        "label": "Kings League, Brasil campeón de la Kings World Cup Nations 2025",
+        "url": "https://kingsleague.pro/en/kwc-nations/news/brazil-champions-kings-world-cup-nations-2025"
+      },
+      {
+        "label": "Streams Charts, la nueva temporada de la Kings League",
+        "url": "https://streamscharts.com/news/new-kings-league-season-announcement"
+      },
+      {
+        "label": "Streams Charts, Kings World Cup Clubs 2026",
+        "url": "https://streamscharts.com/news/kings-world-cup-clubs-2026-viewership"
+      },
+      {
+        "label": "DAZN, derechos de la Kings League para 2026",
+        "url": "https://dazngroup.com/press-room/dazn-expands-global-football-portfolio-with-kings-leagues-most-dynamic-competitions-in-2026/"
+      },
+      {
+        "label": "ESPN, el plan de la Kings League para Estados Unidos",
+        "url": "https://www.espn.co.uk/football/story/_/id/45512487/gerard-pique-kings-league-eyes-launch-us-2026"
+      },
+      {
+        "label": "FC Barcelona, la Final Four en el Camp Nou",
+        "url": "https://www.fcbarcelona.com/en/news/3029927/spotify-camp-nou-to-host-final-four-of-kings-league-infojobs-on-march-26"
+      },
+      {
+        "label": "Fox Sports (AP), el Camp Nou lleno",
+        "url": "https://foxsports.com/articles/soccer/fans-pack-camp-nou-to-watch-piques-kings-league"
+      }
     ]
   },
   "footer": {

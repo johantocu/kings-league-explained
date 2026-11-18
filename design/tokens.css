@@ -1,0 +1,88 @@
+/* Kings League Explainer DS: tokens.
+   Independent explainer, not affiliated with Kings League.
+   Load first, before components.css. */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Color: measured on kingsleague.pro unless marked approx. */
+  --ground: #000000;        /* page background */
+  --surface: #141414;       /* cards, tables, panels */
+  --surface-2: #1C1C1C;     /* hover, nested panels, inputs */
+  --line: #313131;          /* hairlines, dividers (never text) */
+  --steel: #414143;         /* inactive / disabled fills */
+  --ink: #FFFFFF;           /* headings, primary text */
+  --ink-soft: #D1D5DB;      /* body copy */
+  --muted: #B3B3B3;         /* captions, meta, labels (min 12px) */
+  --gold: #F4AF23;          /* brand: strong word, primary button, ticker, key numbers */
+  --gold-deep: #C98A0E;     /* pressed gold */
+  --gold-tint: rgba(244, 175, 35, 0.10); /* highlighted rows, selected chips */
+  --on-gold: #000000;       /* text on gold */
+  --flame: #E35205;         /* links, LIVE dot, wrong answers */
+  --pitch-green: #3CAA36;   /* secret cards, kickers, correct answers */
+  --led-blue: #3346FF;      /* approx. arena LED: glows and lines only, never text */
+  --led-violet: #2A1B6E;    /* approx. arena backlight: large washes only */
+  --crown-navy: #0B1026;    /* approx. ceremonial ground (awards, champions) */
+  --paper: #F3F3F3;         /* one light "breathing" band per page */
+  --paper-ink: #141414;     /* text on paper */
+  --focus-ring: var(--gold);
+
+  /* Type families (Google Fonts substitutes for the league's proprietary fonts) */
+  --font-display: Anton, Impact, "Arial Narrow", sans-serif;   /* always uppercase */
+  --font-wide: Archivo, "Arial Black", sans-serif;             /* use with font-stretch: 125% */
+  --font-sans: Inter, system-ui, sans-serif;
+
+  /* Type scale */
+  --fs-display-xl: 128px;   /* hero h1 (64px on phones) */
+  --fs-display-l: 64px;     /* section h2 (44px on phones) */
+  --fs-heading: 40px;
+  --fs-score: 32px;
+  --fs-ticker: 22px;
+  --fs-card-title: 17px;
+  --fs-label: 12px;
+  --fs-lead: 21px;
+  --fs-body: 17px;
+  --fs-small: 14px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-18: 72px;
+
+  /* Radius */
+  --radius-none: 0px;   /* ticker, shards, full-bleed bands */
+  --radius-sm: 6px;     /* chips, score bugs */
+  --radius-md: 12px;    /* buttons, inputs, video frames */
+  --radius-lg: 20px;    /* cards, panels, secret cards */
+  --radius-pill: 999px; /* language switch, LIVE pill */
+
+  /* Shadow / glow */
+  --glow-gold: 0 0 32px rgba(244, 175, 35, 0.35);
+  --glow-led: 0 0 40px rgba(51, 70, 255, 0.45);
+  --lift: 0 18px 40px rgba(0, 0, 0, 0.6);
+
+  /* Motion */
+  --dur-flip: 500ms;
+  --ease-flip: cubic-bezier(.3, 1.4, .5, 1);
+  --dur-ticker: 40s;
+
+  color-scheme: dark;
+}
+
+html { background: var(--ground); }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--flame); }
+a:hover { color: var(--gold); }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
